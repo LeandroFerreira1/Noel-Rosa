@@ -1,0 +1,10 @@
+@font-face {
+      font-family: "juice-itc";
+      src: url("juice-itc.TTF") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+      }
+
+body{
+font-family: "juice-itc";
+}
