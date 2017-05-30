@@ -37,6 +37,9 @@ nav.menu-navigation-basic ul li a {
 
 }
 
+.img-brand {
+    height: 60px;
+}
 
 .menu-navigation-basic ul li a.selected {
     color:  #9b8a4a;
