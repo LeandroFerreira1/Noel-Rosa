@@ -59,3 +59,50 @@ nav.menu-navigation-basic ul li a {
 .menu-navigation-basic ul li a:hover {
      color: #5c3239;
 }
+
+.botao {
+    display: inline-block;
+    color: #fff;
+    font-size: 1.8em;
+    background-color: #ea7e83;
+    padding: 0.2em;
+    border-width: 1px;
+    border-radius: 50%;
+    border-color: #fdece6;
+}
+
+.botao:hover {
+    cursor: pointer;
+}
+
+
+.player {
+    width: 60%;
+    background-color: #ea7e83;
+    color: #fdece6;
+    padding: 2em;
+}
+
+.controles {
+    width: 20%;
+    margin-left: 40%;
+}
+
+.list-music {
+    height: 10em;
+    overflow-y: scroll;
+    background-color: #fdece6;
+}
+
+#canvas {
+    margin-top:10px;
+    border-style: solid;
+    border-color: #fdece6;
+    border-width: 1px;
+    border-radius: 25px;
+    padding:2px;
+}
+
+#canvas:hover {
+    cursor: pointer;
+}
