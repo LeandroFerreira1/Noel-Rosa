@@ -3,18 +3,29 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width = 1050, user-scalable = no" />
         <meta name="description" content="Tinta Preta">
         <meta name="author" content="">
         <title>Noel Rosa | Tinta Preta</title>
+
+        <!-- Leitor de PDF-->
+
+        <link rel="icon" type="img/png" href="pics/favicon.png" />
+        <script type="text/javascript" src="extras/jquery.min.1.7.js"></script>
+        <script type="text/javascript" src="extras/jquery-ui-1.8.20.custom.min.js"></script>
+        <script type="text/javascript" src="extras/modernizr.2.5.3.min.js"></script>
+        <script type="text/javascript" src="lib/hash.js"></script>
+        <link rel="stylesheet" href="css/magazine.css">
         <link rel="stylesheet" href="css/custom.css">
         <link rel="stylesheet" href="fonts/font.css">
+
+
     </head>
     <body>
 
-      <nav class="menu-navigation-basic" >
-       <ul>
 
+      <nav class="menu-navigation-basic" id="nav" >
+       <ul>
          <li><a href="#">
          <img class="img-brand" src="./img/Noel-Logo.svg" alt="Tinta Preta">
          </a></li>
@@ -22,15 +33,33 @@
          <li><a href="#playlist">Playlist</a></li>
          <li><a href="#tintapreta">Tinta Preta</a></li>
          <li><a href="#contato">Contato</a></li>
-
-
        </ul>
-
 
      </nav>
 
+     <!-- Leitor de PDF -->
 
+      <div id="canvas" class="t">
 
+          <div class="zoom-icon zoom-icon-in"></div>
+
+          <div class="magazine-viewport">
+          	<div class="container">
+          		<div class="magazine">
+          			<!-- Next button -->
+          			<div ignore="1" class="next-button"></div>
+          			<!-- Previous button -->
+          			<div ignore="1" class="previous-button"></div>
+          		</div>
+          	</div>
+          	<div class="bottom">
+          		<div id="slider-bar" class="turnjs-slider">
+          			<div id="slider"></div>
+          		</div>
+          	</div>
+      </div>
+
+     <!--Player de Musica-->
         <div class="player">
             <p class="">
               <img src="http://lorempixel.com/100/100/" alt="">
@@ -63,9 +92,8 @@
 
 
 
-
-    </section>
-
         <script type="text/javascript" src="js/tintapreta.js"></script>
+    <!-- Script Leitor PFD -->
+        <script type="text/javascript" src="js/pdf.js"></script>
     </body>
 </html>
