@@ -118,7 +118,7 @@ function barraProgresso() {
     if (canvas.getContext) {
         var ctx = canvas.getContext("2d");
         ctx.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
-        ctx.fillStyle = "rgb(200,100,100)";
+        ctx.fillStyle = "#fdece6";
         var fWidth = (elapsedTime / $playerAudio.duration) * (canvas.clientWidth);
         if (fWidth > 0) {
             ctx.fillRect(0, 0, fWidth, canvas.clientHeight);

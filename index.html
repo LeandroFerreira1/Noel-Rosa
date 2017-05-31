@@ -9,16 +9,7 @@
         <title>Noel Rosa | Tinta Preta</title>
         <link rel="stylesheet" href="css/custom.css">
         <link rel="stylesheet" href="fonts/font.css">
-        <style id="inlinecss" type="text/css">
-            /* put a border around the canvas element */
-            #canvas
-            {
-                margin-top:10px;
-                border-style:solid;
-                border-width:1px;
-                padding:3px;
-            }
-        </style>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
       <nav class="menu-navigation-basic" >
@@ -32,7 +23,7 @@
      </nav>
 
         <section>
-            <div class="player" style="background-color:#ccc;width: 600px;">
+            <div class="player">
                 <div class="">
                   <img src="http://lorempixel.com/100/100/" alt="">
                   <span id="nome-musica"></span> - <span id="artista"></span>
@@ -42,20 +33,21 @@
                         canvas not supported
                     </canvas>
                 </div>
-                <div class="controls">
-                    <input value="<" type="button" id="restart-music" onclick="restartMusic()" />
-                    <input value="|<" type="button" id="previous-music" />
-                    <input value="Play" type="button" id="play-pause" />
-                    <input value=">|" type="button" id="next-music" />
+                <div class="controles">
+                    <!--<input value="<" class="botao" type="button" id="restart-music" onclick="restartMusic()" />-->
+                    <button class="botao" type="button" name="button" id="previous-music"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+                    <button class="botao" type="button" name="button" id="play-pause"><i class="fa fa-play" aria-hidden="true"></i></button>
+                    <button class="botao" type="button" name="button" id="next-music"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+                    <button class="botao" type="button" name="button"><i class="fa fa-random" aria-hidden="true"></i></button>
                 </div>
                 <audio id="player">
                     <source id="file-mp3" src="" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
-            </div>
-            <div class="" style="height:140px; width: 600px; overflow-y: scroll;">
-              <ul id="playlist">
-              </ul>
+                <div class="list-music">
+                  <ul id="playlist">
+                  </ul>
+                </div>
             </div>
         </section>
 
