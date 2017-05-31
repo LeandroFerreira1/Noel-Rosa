@@ -9,62 +9,55 @@
         <title>Noel Rosa | Tinta Preta</title>
         <link rel="stylesheet" href="css/custom.css">
         <link rel="stylesheet" href="fonts/font.css">
+        <style id="inlinecss" type="text/css">
+            /* put a border around the canvas element */
+            #canvas
+            {
+                margin-top:10px;
+                border-style:solid;
+                border-width:1px;
+                padding:3px;
+            }
+        </style>
     </head>
     <body>
-
       <nav class="menu-navigation-basic" >
        <ul>
-
-         <li><a href="#">
-         <img class="img-brand" src="./img/Noel-Logo.svg" alt="Tinta Preta">
-         </a></li>
+         <li><a href="#"><img class="img-brand" src="./img/Noel-Logo.svg" alt="Tinta Preta"></a></li>
          <li><a href="#projeto" class="">Projeto</a></li>
          <li><a href="#playlist">Playlist</a></li>
          <li><a href="#tintapreta">Tinta Preta</a></li>
          <li><a href="#contato">Contato</a></li>
-
-
        </ul>
-
-
      </nav>
 
-
-
-        <div class="player">
-            <p class="">
-              <img src="http://lorempixel.com/100/100/" alt="">
-              <p id="nome-musica"></p>
-              <span id="duration"></span>
-            </p>
-            <p>
-              <button type="button" name="button">|<</button>
-              <input value="Play" type="button" id="play-pause" />
-              <button type="button" name="button">>|</button>
-            </p>
-        </div>
-
-        <audio id="player" controls>
-            <source id="file-mp3" src="" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-
-        <div class="" style="height:140px; width: 600px; overflow-y: scroll;">
-          <ul>
-            <li><a href="#" onclick="loadMusic(0);playMusic();">(>) Música 001</a></li>
-            <li><a href="#" onclick="loadMusic(1);playMusic();">(>) Música 002</a></li>
-            <li><a href="#" onclick="loadMusic(2);playMusic();">(>) Música 003</a></li>
-            <li><a href="#" onclick="loadMusic(3);playMusic();">(>) Música 004</a></li>
-            <li><a href="#" onclick="loadMusic(4);playMusic();">(>) Música 005</a></li>
-            <li><a href="#" onclick="loadMusic(5);playMusic();">(>) Música 006</a></li>
-            <li><a href="#" onclick="loadMusic(6);playMusic();">(>) Música 007</a></li>
-          </ul>
-        </div>
-
-
-
-
-    </section>
+        <section>
+            <div class="player" style="background-color:#ccc;width: 600px;">
+                <div class="">
+                  <img src="http://lorempixel.com/100/100/" alt="">
+                  <span id="nome-musica"></span> - <span id="artista"></span>
+                </div>
+                <div class="">
+                    <canvas id="canvas" width="500" height="20">
+                        canvas not supported
+                    </canvas>
+                </div>
+                <div class="controls">
+                    <input value="<" type="button" id="restart-music" onclick="restartMusic()" />
+                    <input value="|<" type="button" id="previous-music" />
+                    <input value="Play" type="button" id="play-pause" />
+                    <input value=">|" type="button" id="next-music" />
+                </div>
+                <audio id="player">
+                    <source id="file-mp3" src="" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="" style="height:140px; width: 600px; overflow-y: scroll;">
+              <ul id="playlist">
+              </ul>
+            </div>
+        </section>
 
         <script type="text/javascript" src="js/tintapreta.js"></script>
     </body>
