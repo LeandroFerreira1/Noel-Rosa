@@ -12,13 +12,13 @@ var $playlist = document.querySelector('#playlist');
 var atual;
 
 musicas = [
-    {'id':'1', 'nome':'Música XY 001', 'artista':'Noel Rosa'},
-    {'id':'2', 'nome':'Música XY 002', 'artista':'Noel Rosa'},
-    {'id':'3', 'nome':'Música XY 003', 'artista':'Noel Rosa'},
-    {'id':'4', 'nome':'Música XY 004', 'artista':'Noel Rosa'},
-    {'id':'5', 'nome':'Música XY 005', 'artista':'Noel Rosa'},
-    {'id':'6', 'nome':'Música XY 006', 'artista':'Noel Rosa'},
-    {'id':'7', 'nome':'Música XY 007', 'artista':'Noel Rosa'}
+    {'id':'1', 'nome':'A Genoveva não sabe o que diz', 'artista':'Noel Rosa'},
+    {'id':'2', 'nome':'Boas tensões', 'artista':'Noel Rosa'},
+    {'id':'3', 'nome':'Cem Mil Réis', 'artista':'Noel Rosa'},
+    {'id':'4', 'nome':'Deus sabe o que faz', 'artista':'Noel Rosa'},
+    {'id':'5', 'nome':'Eu Queria um Retratinho de Você', 'artista':'Noel Rosa'},
+    {'id':'6', 'nome':'Filosofia', 'artista':'Noel Rosa'},
+    {'id':'7', 'nome':'Gosto, Mas Não é Muito', 'artista':'Noel Rosa'}
 ];
 
 

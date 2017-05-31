@@ -79,21 +79,22 @@ nav.menu-navigation-basic ul li a {
     width: 60%;
     background-color: #ea7e83;
     color: #fdece6;
+    padding: 2em;
 }
 
 .controles {
-    margin-left: 30%;
+    width: 20%;
+    margin-left: 40%;
 }
 
 .list-music {
-    height: 15em;
+    height: 10em;
     overflow-y: scroll;
     background-color: #fdece6;
 }
 
 #canvas {
     margin-top:10px;
-    margin-left: 5%;
     border-style: solid;
     border-color: #fdece6;
     border-width: 1px;
