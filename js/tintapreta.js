@@ -73,13 +73,15 @@ function loadMusic(index) {
 
 
 function playMusic() {
-    $botaoPlayPause.setAttribute('value', 'Pause');
+    var $icone = document.getElementsByClassName('fa fa-play')[0];
+    $icone.className = 'fa fa-pause';
     $playerAudio.play();
 }
 
 
 function pauseMusic() {
-    $botaoPlayPause.setAttribute('value', 'Play');
+    var $icone = document.getElementsByClassName('fa fa-pause')[0];
+    $icone.className = 'fa fa-play';
     $playerAudio.pause();
 }
 
