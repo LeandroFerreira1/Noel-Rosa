@@ -6,7 +6,17 @@
         <meta name="viewport" content="width = 1050, user-scalable = no" />
         <meta name="description" content="Tinta Preta">
         <meta name="author" content="">
-        <title>Noel Rosa | Tinta Preta</title>
+        <title>Noel Rosa | Rei das Letras</title>
+
+        <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="theme-color" content="#fdece6">
 
         <!-- Leitor de PDF-->
 
@@ -18,40 +28,28 @@
         <link rel="stylesheet" href="css/magazine.css">
         <link rel="stylesheet" href="css/custom.css">
         <link rel="stylesheet" href="fonts/font.css">
-<<<<<<< HEAD
+
+
 
 
     </head>
-    <body>
 
-
-      <nav class="menu-navigation-basic" id="nav" >
-       <ul>
-         <li><a href="#">
-         <img class="img-brand" src="./img/Noel-Logo.svg" alt="Tinta Preta">
-         </a></li>
-=======
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
     <body>
       <nav class="menu-navigation-basic" >
        <ul>
          <li><a href="#"><img class="img-brand" src="./img/Noel-Logo.svg" alt="Tinta Preta"></a></li>
->>>>>>> 7374cec895ef6b0234ea931b984d3b86d5ad6350
+
          <li><a href="#projeto" class="">Projeto</a></li>
          <li><a href="#playlist">Playlist</a></li>
          <li><a href="#tintapreta">Tinta Preta</a></li>
          <li><a href="#contato">Contato</a></li>
        </ul>
-<<<<<<< HEAD
 
      </nav>
 
      <!-- Leitor de PDF -->
 
       <div id="canvas" class="t">
-
-          <div class="zoom-icon zoom-icon-in"></div>
 
           <div class="magazine-viewport">
           	<div class="container">
@@ -62,56 +60,20 @@
           			<div ignore="1" class="previous-button"></div>
           		</div>
           	</div>
-          	<div class="bottom">
-          		<div id="slider-bar" class="turnjs-slider">
-          			<div id="slider"></div>
-          		</div>
-          	</div>
       </div>
 
-     <!--Player de Musica-->
-        <div class="player">
-            <p class="">
-              <img src="http://lorempixel.com/100/100/" alt="">
-              <p id="nome-musica"></p>
-              <span id="duration"></span>
-            </p>
-            <p>
-              <button type="button" name="button">|<</button>
-              <input value="Play" type="button" id="play-pause" />
-              <button type="button" name="button">>|</button>
-            </p>
-        </div>
-
-        <audio id="player" controls>
-            <source id="file-mp3" src="" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-
-        <div class="" style="height:140px; width: 600px; overflow-y: scroll;">
-          <ul>
-            <li><a href="#" onclick="loadMusic(0);playMusic();">(>) Música 001</a></li>
-            <li><a href="#" onclick="loadMusic(1);playMusic();">(>) Música 002</a></li>
-            <li><a href="#" onclick="loadMusic(2);playMusic();">(>) Música 003</a></li>
-            <li><a href="#" onclick="loadMusic(3);playMusic();">(>) Música 004</a></li>
-            <li><a href="#" onclick="loadMusic(4);playMusic();">(>) Música 005</a></li>
-            <li><a href="#" onclick="loadMusic(5);playMusic();">(>) Música 006</a></li>
-            <li><a href="#" onclick="loadMusic(6);playMusic();">(>) Música 007</a></li>
-          </ul>
-        </div>
-
-
-=======
-     </nav>
 
         <section>
             <div class="player">
-                <div class="">
+                <div class="teste">
                   <img src="http://lorempixel.com/100/100/" alt="">
-                  <span id="nome-musica"></span> - <span id="artista"></span>
+                  <div class="titulo">
+                    <span id="nome-musica"></span> - <span id="artista"></span>
+                  </div>
+
                 </div>
                 <div class="">
-                    <canvas id="canvas" width="500px" height="12px">
+                    <canvas id="canvasBarra" width="500px" height="12px">
                         canvas not supported
                     </canvas>
                 </div>
@@ -132,7 +94,7 @@
               </ul>
             </div>
         </section>
->>>>>>> 7374cec895ef6b0234ea931b984d3b86d5ad6350
+
 
         <script type="text/javascript" src="js/tintapreta.js"></script>
     <!-- Script Leitor PFD -->

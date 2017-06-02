@@ -3,7 +3,7 @@ var $botaoNext = document.querySelector('#next-music');
 var $botaoPrevious = document.querySelector('#previous-music');
 var $playerAudio = document.querySelector('#player');
 var $fileMp3 = document.querySelector('#file-mp3');
-var $canvas = document.getElementById('canvas');
+var $canvas = document.getElementById('canvasBarra');
 
 var $nomeMusica = document.querySelector('#nome-musica');
 var $artista = document.querySelector('#artista');

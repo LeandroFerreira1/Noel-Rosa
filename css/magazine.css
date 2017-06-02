@@ -1,12 +1,9 @@
-
 .t{
 	padding-top: 3em;
 }
-
-
 .magazine-viewport .container{
 	position:absolute;
-	top:45%;
+	top:49%;
 	left:50%;
 	width:608px;
 	height:460px;
@@ -350,7 +347,7 @@
 	z-index:1000;
 	width:22px;
 	height:22px;
-	top:60px;
+	top:70px;
 	right:10px;
 	background-image:url(../pics/zoom-icons.png);
 	background-size:88px 22px;
@@ -380,4 +377,8 @@
 	left:0;
 	bottom:0;
 	width:100%;
+}
+
+#p{
+	z-index: 0;
 }
