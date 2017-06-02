@@ -102,6 +102,7 @@ nav.menu-navigation-basic ul li a {
     border-width: 0;
     cursor: pointer;
     outline:none;
+    text-decoration: none;
 }
 
 .botao:hover {

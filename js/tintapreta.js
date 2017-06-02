@@ -1,6 +1,10 @@
 var $botaoPlayPause = document.querySelector('#play-pause');
 var $botaoNext = document.querySelector('#next-music');
 var $botaoPrevious = document.querySelector('#previous-music');
+var $botaoVolumeOff = document.querySelector('#volume-off');
+var $botaoShuffle = document.querySelector('#shuffle-music');
+var $botaoDownload = document.querySelector('#download-music');
+
 var $playerAudio = document.querySelector('#player');
 var $fileMp3 = document.querySelector('#file-mp3');
 var $canvas = document.getElementById('canvas-barra');
@@ -9,7 +13,8 @@ var $nomeMusica = document.querySelector('#nome-musica');
 var $artista = document.querySelector('#artista');
 var $playlist = document.querySelector('#playlist');
 
-var atual;
+var musicaAtual = 0;
+var flagShuffle = false;
 
 musicas = [
     {'id':'1', 'nome':'Não morre tão cedo', 'artista':'Noel Rosa'},
@@ -35,7 +40,7 @@ musicas = [
 function initEvents() {
 
     loadPlaylist();
-    loadMusic(0);
+    loadMusic(musicaAtual);
 
     $playerAudio.addEventListener("timeupdate", barraProgresso, true);
     $canvas.addEventListener("click", function(e) {
@@ -73,10 +78,34 @@ $botaoPrevious.addEventListener('click', function(e) {
 }, true);
 
 
+$playerAudio.addEventListener('ended', function(e) {
+    nextMusic();
+}, true);
+
+
+$botaoVolumeOff.addEventListener('click', function(e) {
+    if ($playerAudio.volume != 0) {
+        $playerAudio.volume = 0;
+        $botaoVolumeOff.textContent = 'volume_off';
+    } else {
+        $playerAudio.volume = 1;
+        $botaoVolumeOff.textContent = 'volume_up';
+    }
+}, true);
+
+
+$botaoShuffle.addEventListener('click', function(e) {
+    flagShuffle = true;
+    shuffleMusic();
+}, true);
+
+
 function loadMusic(index) {
-    atual = index;
+    musicaAtual = index;
     $nomeMusica.textContent = musicas[index].nome;
     $artista.textContent = musicas[index].artista;
+    $botaoDownload.setAttribute('href', 'musics/'+ musicas[index].id +'.mp3');
+    $botaoDownload.setAttribute('download', musicas[index].nome +'.mp3');
     $fileMp3.setAttribute('src', 'musics/'+ musicas[index].id +'.mp3');
     $playerAudio.load();
 }
@@ -95,16 +124,16 @@ function pauseMusic() {
 
 
 function nextMusic() {
-    if (atual < (musicas.length-1)) {
-        loadMusic(atual+1);
+    if (musicaAtual < (musicas.length-1)) {
+        loadMusic(musicaAtual+1);
         playMusic();
     }
 }
 
 
 function previousMusic() {
-    if (atual > 0) {
-        loadMusic(atual-1);
+    if (musicaAtual > 0) {
+        loadMusic(musicaAtual-1);
         playMusic();
     }
 }
@@ -115,10 +144,19 @@ function restartMusic() {
 }
 
 
+function shuffleMusic() {
+    var sort = Math.round(Math.random() * 8); //(musicas.length-1));
+    loadMusic(sort);
+    playMusic();
+}
+
+
 function loadPlaylist() {
     for (var i = 0; i < musicas.length; i++) {
         playlist.innerHTML +=
-            "<button class='faixa' onclick='loadMusic("+ i +");playMusic();'><i class='material-icons'>play_circle_filled</i> "+ musicas[i].nome +"</button>";
+            "<button class='faixa' onclick='loadMusic("+ i +");playMusic();'>" +
+                "<i class='material-icons'>play_circle_filled</i> "+ musicas[i].nome +
+            "</button>";
     }
 }
 
