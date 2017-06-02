@@ -79,10 +79,14 @@ nav.menu-navigation-basic ul li a {
     color: #C24E57;
 }
 
+.player-list {
+    width: 90%;
+}
+
 .player {
     background-color: #ea7e83;
     color: #C24E57;
-    padding: 2em;
+    padding: 1.2em;
 }
 
 .titulo {
@@ -93,10 +97,14 @@ nav.menu-navigation-basic ul li a {
   color: #fff;
 }
 
+.controles {
+    display: inline;
+}
+
 .botao {
     display: inline-block;
     color: #fff;
-    font-size: 2em;
+    font-size: 1.6em;
     background-color: #ea7e83;
     border-width: 0;
     cursor: pointer;
@@ -106,6 +114,10 @@ nav.menu-navigation-basic ul li a {
 
 .botao:hover {
     color: #F4ACAD;
+}
+
+#restart-music {
+  display: none;
 }
 
 .list-music {
@@ -153,4 +165,28 @@ nav.menu-navigation-basic ul li a {
 .scrollbar::-webkit-scrollbar-thumb {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: #C24E57;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .capa {
+      display: inline;
+    }
+
+    .player-list {
+        width: 60%;
+    }
+
+    .player {
+        padding: 2em;
+    }
+
+    .botao {
+        font-size: 2em;
+    }
+
+    #restart-music {
+      display: inline-block;
+    }
 }

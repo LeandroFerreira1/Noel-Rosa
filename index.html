@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width = 1050, user-scalable = no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Tinta Preta">
         <meta name="author" content="">
         <title>Noel Rosa | Rei das Letras</title>
@@ -64,14 +64,13 @@
     </div>
 
       <div class="playlist">
+        <section class="player-list">
           <div class="">
               <h2>Playlist</h2>
           </div>
-
-        <section>
             <div class="player">
                 <div class="teste">
-                  <img src="http://lorempixel.com/100/100/" alt="">
+                  <img src="http://lorempixel.com/120/120/" class="capa" alt="">
                   <div class="titulo">
                     <span id="nome-musica"></span> - <span id="artista"></span>
                   </div>
@@ -82,7 +81,7 @@
                     </canvas>
                 </div>
                 <div class="controles">
-                    <button class="botao material-icons" type="button" name="button" id="restart-music" onclick="restartMusic()">history</button>
+                    <button class="botao material-icons" type="button" name="button" id="restart-music" onclick="restartMusic()">replay</button>
                     <button class="botao material-icons" type="button" name="button" id="previous-music">skip_previous</button>
                     <button class="botao material-icons" type="button" name="button" id="play-pause">play_arrow</button>
                     <button class="botao material-icons" type="button" name="button" id="next-music">skip_next</button>
@@ -95,9 +94,7 @@
                     Your browser does not support the audio element.
                 </audio>
             </div>
-            <div class="list-music scrollbar" id="playlist">
-
-            </div>
+            <div class="list-music scrollbar" id="playlist"></div>
         </section>
     </div>
 

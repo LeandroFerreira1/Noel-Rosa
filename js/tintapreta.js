@@ -16,7 +16,7 @@ var $playlist = document.querySelector('#playlist');
 var musicaAtual = 0;
 var flagShuffle = false;
 
-musicas = [
+var musicas = [
     {'id':'1', 'nome':'Não morre tão cedo', 'artista':'Noel Rosa'},
     {'id':'2', 'nome':'Minha viola', 'artista':'Noel Rosa'},
     {'id':'3', 'nome':'Com que roupa', 'artista':'Noel Rosa'},
@@ -36,13 +36,13 @@ musicas = [
     {'id':'17', 'nome':'Último desejo', 'artista':'Noel Rosa'}
 ];
 
+loadPlaylist();
+loadMusic(musicaAtual);
 
 function initEvents() {
 
-    loadPlaylist();
-    loadMusic(musicaAtual);
-
     $playerAudio.addEventListener("timeupdate", barraProgresso, true);
+
     $canvas.addEventListener("click", function(e) {
         if (!e) {
             e = window.event;
@@ -57,6 +57,7 @@ function initEvents() {
 }
 
 window.addEventListener("DOMContentLoaded", initEvents, false);
+$playerAudio.addEventListener("timeupdate", barraProgresso, true);
 
 
 $botaoPlayPause.addEventListener('click', function(e) {
@@ -168,6 +169,7 @@ function barraProgresso() {
         ctx.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
         ctx.fillStyle = "#fff";
         var fWidth = (elapsedTime / $playerAudio.duration) * (canvas.clientWidth);
+        console.log($playerAudio.duration);
         if (fWidth > 0) {
             ctx.fillRect(0, 0, fWidth, canvas.clientHeight);
         }
