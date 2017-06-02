@@ -3,7 +3,7 @@ var $botaoNext = document.querySelector('#next-music');
 var $botaoPrevious = document.querySelector('#previous-music');
 var $playerAudio = document.querySelector('#player');
 var $fileMp3 = document.querySelector('#file-mp3');
-var $canvas = document.getElementById('canvasBarra');
+var $canvas = document.getElementById('canvas-barra');
 
 var $nomeMusica = document.querySelector('#nome-musica');
 var $artista = document.querySelector('#artista');
@@ -73,15 +73,13 @@ function loadMusic(index) {
 
 
 function playMusic() {
-    var $icone = document.getElementsByClassName('fa fa-play')[0];
-    $icone.className = 'fa fa-pause';
+    $botaoPlayPause.textContent = 'pause';
     $playerAudio.play();
 }
 
 
 function pauseMusic() {
-    var $icone = document.getElementsByClassName('fa fa-pause')[0];
-    $icone.className = 'fa fa-play';
+    $botaoPlayPause.textContent = 'play_arrow';
     $playerAudio.pause();
 }
 
@@ -110,7 +108,7 @@ function restartMusic() {
 function loadPlaylist() {
     for (var i = 0; i < musicas.length; i++) {
         playlist.innerHTML +=
-            "<li><a href='#' onclick='loadMusic("+ i +");playMusic();'>(>) "+ musicas[i].nome +"</a></li>";
+            "<button class='faixa' onclick='loadMusic("+ i +");playMusic();'><i class='material-icons'>play_circle_filled</i> "+ musicas[i].nome +"</button>";
     }
 }
 
@@ -120,7 +118,7 @@ function barraProgresso() {
     if (canvas.getContext) {
         var ctx = canvas.getContext("2d");
         ctx.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
-        ctx.fillStyle = "#fdece6";
+        ctx.fillStyle = "#fff";
         var fWidth = (elapsedTime / $playerAudio.duration) * (canvas.clientWidth);
         if (fWidth > 0) {
             ctx.fillRect(0, 0, fWidth, canvas.clientHeight);

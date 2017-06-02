@@ -60,8 +60,13 @@
           			<div ignore="1" class="previous-button"></div>
           		</div>
           	</div>
-      </div>
+        </div>
+    </div>
 
+      <div class="playlist">
+          <div class="">
+              <h2>Playlist</h2>
+          </div>
 
         <section>
             <div class="player">
@@ -70,34 +75,34 @@
                   <div class="titulo">
                     <span id="nome-musica"></span> - <span id="artista"></span>
                   </div>
-
                 </div>
                 <div class="">
-                    <canvas id="canvasBarra" width="500px" height="12px">
+                    <canvas id="canvas-barra" width="500px" height="12px">
                         canvas not supported
                     </canvas>
                 </div>
                 <div class="controles">
-                    <!--<input value="<" class="botao" type="button" id="restart-music" onclick="restartMusic()" />-->
-                    <button class="botao" type="button" name="button" id="previous-music"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
-                    <button class="botao" type="button" name="button" id="play-pause"><i class="fa fa-play" aria-hidden="true"></i></button>
-                    <button class="botao" type="button" name="button" id="next-music"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
-                    <button class="botao" type="button" name="button"><i class="fa fa-random" aria-hidden="true"></i></button>
+                    <button class="botao material-icons" type="button" name="button" id="restart-music" onclick="restartMusic()">history</button>
+                    <button class="botao material-icons" type="button" name="button" id="previous-music">skip_previous</button>
+                    <button class="botao material-icons" type="button" name="button" id="play-pause">play_arrow</button>
+                    <button class="botao material-icons" type="button" name="button" id="next-music">skip_next</button>
+                    <button class="botao material-icons" type="button" name="button" id="random-music">shuffle</button>
+                    <button class="botao material-icons" type="button" name="button" id="download-music">file_download</button>
                 </div>
                 <audio id="player">
                     <source id="file-mp3" src="" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </div>
-            <div class="list-music">
-              <ul id="playlist">
-              </ul>
+            <div class="list-music" id="playlist">
+
             </div>
         </section>
+    </div>
 
 
         <script type="text/javascript" src="js/tintapreta.js"></script>
-    <!-- Script Leitor PFD -->
+        <!-- Script Leitor PFD -->
         <script type="text/javascript" src="js/pdf.js"></script>
     </body>
 </html>

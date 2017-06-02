@@ -5,6 +5,6 @@
       font-style: normal;
       }
 
-body{
-font-family: "juice-itc";
+html, body, button {
+    font-family: "juice-itc";
 }

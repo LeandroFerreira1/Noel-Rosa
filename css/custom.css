@@ -62,61 +62,79 @@ nav.menu-navigation-basic ul li a {
      color: #5c3239;
 }
 
-.botao {
-    display: inline-block;
-    color: #fff;
-    font-size: 1.8em;
-    background-color: #ea7e83;
-    padding: 0.2em;
-    border-width: 1px;
-    border-radius: 50%;
-    border-color: #fdece6;
+
+.playlist {
+    height: 100%;
+    min-height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    background-color: #F4ACAD;
 }
 
-.botao:hover {
-    cursor: pointer;
+.playlist h2 {
+    font-size: 2em;
+    color: #C24E57;
 }
-
 
 .player {
-    width: 50%;
+    width: 90%;
     background-color: #ea7e83;
-    color: #fdece6;
+    color: #C24E57;
     padding: 2em;
 }
 
-.controles {
-    width: 20%;
-    margin-left: 40%;
+.titulo {
+  display: inline-block;
+  position: absolute;
+  padding-left: 1em;
+  font-size: 1.8em;
+  color: #fff;
+}
+
+.botao {
+    display: inline-block;
+    color: #fff;
+    font-size: 2em;
+    background-color: #ea7e83;
+    border-width: 0;
+    cursor: pointer;
+    outline:none;
+}
+
+.botao:hover {
+    color: #F4ACAD;
 }
 
 .list-music {
-    height: 10em;
-    width: 54.8%;
+    height: 12em;
     overflow-y: scroll;
     background-color: #fdece6;
 }
 
-#canvasBarra {
+.faixa {
+    display: block;
+    background-color: transparent;
+    border-width: 0;
+    color: #C24E57;
+    vertical-align: top;
+    cursor: pointer;
+    font-size: 1.2em;
+    outline:none;
+}
+
+.faixa:hover {
+    color: ;
+}
+
+#canvas-barra {
     margin-top:10px;
     border-style: solid;
     border-color: #fdece6;
     border-width: 1px;
     border-radius: 25px;
     padding:2px;
-}
-
-
-
-.titulo {
-  display: inline-block;
-  position: absolute;
-  padding-left: 5%;
-  font-size: 1.8em;
-
-}
-
-#canvasBarra:hover {
-
     cursor: pointer;
 }
