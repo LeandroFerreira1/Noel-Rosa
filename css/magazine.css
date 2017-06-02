@@ -5,21 +5,21 @@
 	position:absolute;
 	top:49%;
 	left:50%;
-	width:608px;
-	height:460px;
+	width:708px;
+	height:560px;
 	margin:auto;
 }
 
 .magazine-viewport .magazine{
-	width:608px;
-	height:460px;
+	width:708px;
+	height:560px;
 	left:-461px;
 	top:-300px;
 }
 
 .magazine-viewport .page{
-	width:461px;
-	height:600px;
+	width:708px;
+	height:560px;
 	background-color:white;
 	background-repeat:no-repeat;
 	background-size:100% 100%;
@@ -142,7 +142,7 @@
 .magazine-viewport .next-button,
 .magazine-viewport .previous-button{
 	width:22px;
-	height:460px;
+	height:560px;
 	position:absolute;
 	top:0;
 }
@@ -173,7 +173,7 @@
 .magazine-viewport .previous-button-hover,
 .magazine-viewport .previous-button-down{
 	background-image:url(../pics/arrows.png);
-	background-position:-4px 230px;
+	background-position:-4px 280px;
 	background-repeat:no-repeat;
 }
 
@@ -185,7 +185,7 @@
 .magazine-viewport .next-button-hover,
 .magazine-viewport .next-button-down{
 	background-image:url(../pics/arrows.png);
-	background-position:-38px 230px;
+	background-position:-38px 280px;
 	background-repeat:no-repeat;
 }
 
