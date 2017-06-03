@@ -147,6 +147,7 @@ nav.menu-navigation-basic ul li a {
 }
 
 .player-list {
+
     width: 90%;
     padding-bottom: 2em;
 }
@@ -169,6 +170,7 @@ nav.menu-navigation-basic ul li a {
 
 .titulo {
     text-align: center;
+    font-family: "calibri";
     display: block;
     padding-left: 1em;
     font-size: 1.2em;
@@ -227,6 +229,7 @@ nav.menu-navigation-basic ul li a {
 
 .faixa {
     display: block;
+    font-family: "calibri";
     background-color: transparent;
     border-width: 0;
     color: #C24E57;
