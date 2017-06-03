@@ -62,8 +62,7 @@ nav.menu-navigation-basic ul li a {
      color: #5c3239;
 }
 
-
-.playlist {
+.content {
     height: 100%;
     min-height: 100%;
     display: -webkit-flex;
@@ -71,29 +70,64 @@ nav.menu-navigation-basic ul li a {
     -webkit-align-items: center;
     align-items: center;
     -webkit-justify-content: center;
-    background-color: #F4ACAD;
 }
 
-.playlist h2 {
-    font-size: 2em;
-    color: #C24E57;
+.playlist {
+    background-color: #f5adad;
 }
+
+.sobre {
+    background-color: #e57c80;
+}
+
+.texto-sobre {
+    width: 90%;
+    text-align: justify;
+    color: #4a1d2a;
+    padding-bottom: 2em;
+}
+
+.contato {
+    color: #f4dcdc;
+    font-size: 1.2em;
+    background-color: #5c3239;
+    padding: 1.2em;
+}
+
+.content h2 {
+    font-size: 2em;
+    color: #5c3239;
+}
+
+.content p, li {
+    font-family: sans-serif;
+}
+
 
 .player-list {
     width: 90%;
+    padding-bottom: 2em;
 }
 
 .player {
-    background-color: #ea7e83;
+    background-color: #c24d56;
     color: #C24E57;
     padding: 1.2em;
 }
 
+.capa {
+    display: block;
+    height: 10em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .titulo {
-  display: inline-block;
+    text-align: center;
+  display: block;
   position: absolute;
   padding-left: 1em;
-  font-size: 1.8em;
+  font-size: 1.2em;
   color: #fff;
 }
 
@@ -105,7 +139,7 @@ nav.menu-navigation-basic ul li a {
     display: inline-block;
     color: #fff;
     font-size: 1.6em;
-    background-color: #ea7e83;
+    background-color: transparent;
     border-width: 0;
     cursor: pointer;
     outline:none;
@@ -121,7 +155,7 @@ nav.menu-navigation-basic ul li a {
 }
 
 .list-music {
-    height: 12em;
+    height: 18em;
     overflow-y: scroll;
     background-color: #fdece6;
 }
@@ -133,6 +167,8 @@ nav.menu-navigation-basic ul li a {
     color: #C24E57;
     vertical-align: top;
     cursor: pointer;
+    height: 2em;
+    padding: 0.2em;
     font-size: 1.2em;
     outline:none;
 }
@@ -172,6 +208,13 @@ nav.menu-navigation-basic ul li a {
 
     .capa {
       display: inline;
+      height: 8em;
+    }
+
+    .titulo {
+        text-align: left;
+        font-size: 1.8em;
+         display: inline;
     }
 
     .player-list {
@@ -188,5 +231,12 @@ nav.menu-navigation-basic ul li a {
 
     #restart-music {
       display: inline-block;
+    }
+
+    .texto-sobre {
+        width: 60%;
+        text-align: justify;
+        color: #4a1d2a;
+        padding-bottom: 2em;
     }
 }
