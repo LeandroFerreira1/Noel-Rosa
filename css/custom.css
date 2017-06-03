@@ -1,8 +1,27 @@
 
+@font-face {
+      font-family: "romance-fatal";
+      src: url("../fonts/romance-fatal.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+      }
+
+@font-face {
+  font-family: "calibri";
+  src: url("../fonts/calibri.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #f4dcdc;
+  font-family: "romance-fatal";
+}
+
+button {
+    font-family: "romance-fatal";
 }
 
 
@@ -70,7 +89,15 @@ nav.menu-navigation-basic ul li a {
     -webkit-align-items: center;
     align-items: center;
     -webkit-justify-content: center;
+    border-top: solid #f4dcdc;
+    border-width: 0.2em;
 }
+
+.revista{
+  background-color: #f4dcdc;
+  margin-bottom: -10%;
+}
+
 
 .playlist {
     background-color: #f5adad;
@@ -78,6 +105,15 @@ nav.menu-navigation-basic ul li a {
 
 .sobre {
     background-color: #e57c80;
+    padding-bottom: 8em;
+
+}
+
+.projeto {
+    background-color: #f6cece;
+    padding-top: 7em;
+    padding-bottom: 8em;
+
 }
 
 .texto-sobre {
@@ -85,13 +121,16 @@ nav.menu-navigation-basic ul li a {
     text-align: justify;
     color: #4a1d2a;
     padding-bottom: 2em;
+
 }
 
 .contato {
     color: #f4dcdc;
-    font-size: 1.2em;
+    font-size: 1.4em;
     background-color: #5c3239;
-    padding: 1.2em;
+    padding-bottom: 2em;
+    padding-top: 3em;
+
 }
 
 .content h2 {
@@ -100,11 +139,11 @@ nav.menu-navigation-basic ul li a {
 }
 
 .content p {
-    font-family: sans-serif;
+    font-family: "calibri";
 }
 
 .content li {
-    font-family: sans-serif;
+    font-family: "calibri";
 }
 
 .player-list {
@@ -150,6 +189,26 @@ nav.menu-navigation-basic ul li a {
     cursor: pointer;
     outline:none;
     text-decoration: none;
+
+}
+
+.download-album {
+  text-align: center;
+}
+
+.botao-download {
+    display: inline-block;
+    color: #fff;
+    font-size: 1.4em;
+    background-color: transparent;
+    border-width: 0;
+    cursor: pointer;
+    outline:none;
+    text-decoration: none;
+    border: solid #fff;
+    border-width: .1em;
+    padding: .2em 1em .2em 1em;
+    margin-top: 1em;
 }
 
 .botao:hover {

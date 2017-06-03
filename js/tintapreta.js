@@ -11,7 +11,6 @@ var $fileMp3 = document.querySelector('#file-mp3');
 var $canvas = document.getElementById('canvas-barra');
 
 var $nomeMusica = document.querySelector('#nome-musica');
-var $artista = document.querySelector('#artista');
 var $playlist = document.querySelector('#playlist');
 
 var musicaAtual = 0;
@@ -105,7 +104,6 @@ $botaoShuffle.addEventListener('click', function(e) {
 function loadMusic(index) {
     musicaAtual = index;
     $nomeMusica.textContent = musicas[index].nome;
-    $artista.textContent = musicas[index].artista;
     $capaAlbum.setAttribute('src', 'img/' + musicas[index].capa);
     $botaoDownload.setAttribute('href', 'musics/'+ musicas[index].id +'.mp3');
     $botaoDownload.setAttribute('download', musicas[index].nome +'.mp3');

@@ -21,17 +21,13 @@
         <!-- Leitor de PDF-->
 
         <link rel="icon" type="img/png" href="pics/favicon.png" />
+        <link rel="stylesheet" href="css/magazine.css">
+        <link rel="stylesheet" href="fonts/font.css">
+        <link rel="stylesheet" href="css/custom.css">
         <script type="text/javascript" src="extras/jquery.min.1.7.js"></script>
         <script type="text/javascript" src="extras/jquery-ui-1.8.20.custom.min.js"></script>
         <script type="text/javascript" src="extras/modernizr.2.5.3.min.js"></script>
         <script type="text/javascript" src="lib/hash.js"></script>
-        <link rel="stylesheet" href="css/magazine.css">
-        <link rel="stylesheet" href="fonts/font.css">
-        <link rel="stylesheet" href="css/custom.css">
-
-
-
-
 
     </head>
 
@@ -50,6 +46,8 @@
 
      <!-- Leitor de PDF -->
 
+     <div class="revista">
+
       <div id="canvas" class="t">
 
           <div class="magazine-viewport">
@@ -64,25 +62,38 @@
         </div>
     </div>
 
+  </div>
+
+    <div class="content projeto">
+        <div class="texto-sobre">
+            <h2>Projeto</h2>
+            <p>
+              Projeto
+              Em homenagem aos 80 anos da morte do cantor Noel Rosa, o curso de Design Gráfico da Faculdade das Américas
+              o transformou em tema para o projeto integrado do terceiro semestre.
+            </p>
+            <p>
+              O projeto consiste em um Bookazine inspirado na vida e na obra de Noel, através de um passeio por sua biografia,
+              composições e seu impacto na história da música brasileira, repleto de ilustrações originais.
+            </p>
+
+        </div>
+    </div>
+
       <div class="content playlist">
           <div class="player-list">
               <h2>Playlist</h2>
             <div class="player">
 
                     <img src="" class="capa" id="capa-album" alt="">
-
+                <div class="controles">
                 <div class="titulo">
-                  <span id="nome-musica"></span> - <span id="artista"></span>
+                  <span id="nome-musica"></span>
                 </div>
                 <div class="">
-                    <!--
-                    <canvas id="canvas-barra" width="500px" height="12px">
-                        canvas not supported
-                    </canvas>
-                    -->
                     <progress value="0" max="100">0%</progress>
                 </div>
-                <div class="controles">
+
                     <button class="botao material-icons" type="button" name="button" id="restart-music" onclick="restartMusic()">replay</button>
                     <button class="botao material-icons" type="button" name="button" id="previous-music">skip_previous</button>
                     <button class="botao material-icons" type="button" name="button" id="play-pause">play_arrow</button>
@@ -97,6 +108,9 @@
                 </audio>
             </div>
             <div class="list-music scrollbar" id="playlist"></div>
+            <div class="download-album">
+              <a href="" download="" class="botao-download" type="button" id="download-album">Download</a>
+            </div>
         </div>
     </div>
 
@@ -129,5 +143,6 @@
         <script type="text/javascript" src="js/tintapreta.js"></script>
         <!-- Script Leitor PFD -->
         <script type="text/javascript" src="js/pdf.js"></script>
+
     </body>
 </html>
