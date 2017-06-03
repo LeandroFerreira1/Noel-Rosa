@@ -26,8 +26,9 @@
         <script type="text/javascript" src="extras/modernizr.2.5.3.min.js"></script>
         <script type="text/javascript" src="lib/hash.js"></script>
         <link rel="stylesheet" href="css/magazine.css">
-        <link rel="stylesheet" href="css/custom.css">
         <link rel="stylesheet" href="fonts/font.css">
+        <link rel="stylesheet" href="css/custom.css">
+
 
 
 
@@ -67,16 +68,19 @@
           <div class="player-list">
               <h2>Playlist</h2>
             <div class="player">
-                <div class="teste">
-                  <img src="" class="capa" id="capa-album" alt="">
-                  <div class="titulo">
-                    <span id="nome-musica"></span> - <span id="artista"></span>
-                  </div>
+
+                    <img src="" class="capa" id="capa-album" alt="">
+
+                <div class="titulo">
+                  <span id="nome-musica"></span> - <span id="artista"></span>
                 </div>
                 <div class="">
+                    <!--
                     <canvas id="canvas-barra" width="500px" height="12px">
                         canvas not supported
                     </canvas>
+                    -->
+                    <progress value="0" max="100">0%</progress>
                 </div>
                 <div class="controles">
                     <button class="botao material-icons" type="button" name="button" id="restart-music" onclick="restartMusic()">replay</button>
@@ -84,7 +88,7 @@
                     <button class="botao material-icons" type="button" name="button" id="play-pause">play_arrow</button>
                     <button class="botao material-icons" type="button" name="button" id="next-music">skip_next</button>
                     <button class="botao material-icons" type="button" name="button" id="shuffle-music">shuffle</button>
-                    <button class="botao material-icons" type="button" name="button" id="volume-off">volume_off</button>
+                    <button class="botao material-icons" type="button" name="button" id="volume-off">volume_up</button>
                     <a href="" download="" class="botao material-icons" type="button" id="download-music">file_download</a>
                 </div>
                 <audio id="player">

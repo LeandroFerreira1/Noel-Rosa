@@ -99,10 +99,13 @@ nav.menu-navigation-basic ul li a {
     color: #5c3239;
 }
 
-.content p, li {
+.content p {
     font-family: sans-serif;
 }
 
+.content li {
+    font-family: sans-serif;
+}
 
 .player-list {
     width: 90%;
@@ -110,29 +113,32 @@ nav.menu-navigation-basic ul li a {
 }
 
 .player {
+    text-align: center;
     background-color: #c24d56;
     color: #C24E57;
     padding: 1.2em;
 }
 
 .capa {
+    border: solid .2em;
+    border-color: #fff;
     display: block;
-    height: 10em;
+    height: 12em;
     margin-left: auto;
     margin-right: auto;
 }
 
 .titulo {
     text-align: center;
-  display: block;
-  position: absolute;
-  padding-left: 1em;
-  font-size: 1.2em;
-  color: #fff;
+    display: block;
+    padding-left: 1em;
+    font-size: 1.2em;
+    color: #fff;
 }
 
 .controles {
-    display: inline;
+    padding: .6em;
+    display: block;
 }
 
 .botao {
@@ -214,7 +220,12 @@ nav.menu-navigation-basic ul li a {
     .titulo {
         text-align: left;
         font-size: 1.8em;
-         display: inline;
+        display: inline;
+    }
+
+    .controles {
+        text-align: center;
+        display: inline;
     }
 
     .player-list {
@@ -222,6 +233,7 @@ nav.menu-navigation-basic ul li a {
     }
 
     .player {
+        text-align: left;
         padding: 2em;
     }
 
