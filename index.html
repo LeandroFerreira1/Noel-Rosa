@@ -22,7 +22,6 @@
 
         <link rel="icon" type="img/png" href="pics/favicon.png" />
         <link rel="stylesheet" href="css/magazine.css">
-        <link rel="stylesheet" href="fonts/font.css">
         <link rel="stylesheet" href="css/custom.css">
         <script type="text/javascript" src="extras/jquery.min.1.7.js"></script>
         <script type="text/javascript" src="extras/jquery-ui-1.8.20.custom.min.js"></script>
@@ -34,37 +33,33 @@
     <body>
       <nav class="menu-navigation-basic" >
        <ul>
-         <li><a href="#"><img class="img-brand" src="./img/Noel-Logo.svg" alt="Tinta Preta"></a></li>
-
-         <li><a href="#projeto" class="">Projeto</a></li>
-         <li><a href="#playlist">Playlist</a></li>
-         <li><a href="#tintapreta">Tinta Preta</a></li>
-         <li><a href="#contato">Contato</a></li>
+         <li><a href="#top" class="scroll"><img class="img-brand" src="./img/Noel-Logo.svg" alt="Tinta Preta"></a></li>
+         <li><a href="#projeto" class="scroll">Projeto</a></li>
+         <li><a href="#playlist" class="scroll">Playlist</a></li>
+         <li><a href="#tintapreta" class="scroll">Tinta Preta</a></li>
+         <li><a href="#contato" class="scroll">Contato</a></li>
        </ul>
 
      </nav>
 
      <!-- Leitor de PDF -->
 
-     <div class="revista">
-
-      <div id="canvas" class="t">
-
-          <div class="magazine-viewport">
-          	<div class="container">
-          		<div class="magazine">
-          			<!-- Next button -->
-          			<div ignore="1" class="next-button"></div>
-          			<!-- Previous button -->
-          			<div ignore="1" class="previous-button"></div>
-          		</div>
-          	</div>
+     <div class="revista" id="top">
+          <div id="canvas">
+              <div class="magazine-viewport">
+              	<div class="container">
+              		<div class="magazine">
+              			<!-- Next button -->
+              			<div ignore="1" class="next-button"></div>
+              			<!-- Previous button -->
+              			<div ignore="1" class="previous-button"></div>
+              		</div>
+              	</div>
+            </div>
         </div>
     </div>
 
-  </div>
-
-    <div class="content projeto">
+    <div class="content projeto" id="projeto">
         <div class="texto-sobre">
             <h2>Projeto</h2>
             <p>
@@ -79,7 +74,7 @@
         </div>
     </div>
 
-      <div class="content playlist">
+      <div class="content playlist" id="playlist">
           <div class="player-list">
               <h2>Playlist</h2>
             <div class="player">
@@ -106,14 +101,14 @@
                     Your browser does not support the audio element.
                 </audio>
             </div>
-            <div class="list-music scrollbar" id="playlist"></div>
+            <div class="list-music scrollbar" id="lista"></div>
             <div class="download-album">
               <a href="" download="" class="botao-download" type="button" id="download-album">Download</a>
             </div>
         </div>
     </div>
 
-    <div class="content sobre">
+    <div class="content sobre" id="tintapreta">
         <div class="texto-sobre">
             <h2>Tinta Preta</h2>
             <p>
@@ -131,7 +126,7 @@
         </div>
     </div>
 
-    <div class="content contato">
+    <div class="content contato" id="contato">
         <div class="">
             <p>artetintapreta@gmail.com</p>
         </div>
@@ -142,6 +137,29 @@
         <script type="text/javascript" src="js/tintapreta.js"></script>
         <!-- Script Leitor PFD -->
         <script type="text/javascript" src="js/pdf.js"></script>
+        <script type="text/javascript">
+            (function($) {
+                "use strict";
+                // Fecha o menu responsivo com clique em algum item
+                $('.navbar-collapse ul li a').click(function() {
+                    $('.navbar-collapse ul li a').addClass('menu-clicked');
+                });
+
+                // marca item do menu clicado
+                $('.menu-navigation-basic ul li a').click(function(){
+                    $('.menu-navigation-basic ul li a').removeClass('selected')
+                    $(this).addClass('selected');
+                });
+
+                // Scroll suave
+                jQuery(document).ready(function($) {
+                  $(".scroll").click(function(event){
+                      event.preventDefault();
+                      $('html,body').animate({scrollTop:$(this.hash).offset().top}, 800);
+                 });
+                });
+            })(jQuery);
+        </script>
 
     </body>
 </html>

@@ -49,13 +49,12 @@ nav.menu-navigation-basic ul li {
 }
 
 nav.menu-navigation-basic ul li a {
-
-  text-align: center;
-  text-decoration: none;
-	color: #ea7e83;
-  margin-top: 0px;
-  padding-top: 1em;
-  font-size: 1.6em;
+    text-align: center;
+    text-decoration: none;
+    color: #ea7e83;
+    margin-top: 0px;
+    padding-top: 1em;
+    font-size: 1.6em;
 
 }
 
@@ -64,9 +63,7 @@ nav.menu-navigation-basic ul li a {
 }
 
 .menu-navigation-basic ul li a.selected {
-    color:  #9b8a4a;
-    border-bottom: 2px solid #dbd84e;
-    padding-bottom: 6px;
+    color: #5c3239;
 }
 
 .menu-navigation-basic ul li a {
@@ -94,8 +91,9 @@ nav.menu-navigation-basic ul li a {
 }
 
 .revista{
-  background-color: #f4dcdc;
-  margin-bottom: -10%;
+    padding-top: 4em;
+    background-color: #f4dcdc;
+    margin-bottom: -8em;
 }
 
 
@@ -111,7 +109,7 @@ nav.menu-navigation-basic ul li a {
 
 .projeto {
     background-color: #f6cece;
-    padding-top: 7em;
+    padding-top: 8em;
     padding-bottom: 8em;
 
 }
@@ -121,7 +119,7 @@ nav.menu-navigation-basic ul li a {
     text-align: justify;
     color: #4a1d2a;
     padding-bottom: 2em;
-
+    padding-top: 4em;
 }
 
 .contato {
@@ -147,7 +145,7 @@ nav.menu-navigation-basic ul li a {
 }
 
 .player-list {
-
+    padding-top: 4em;
     width: 90%;
     padding-bottom: 2em;
 }

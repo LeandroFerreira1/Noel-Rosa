@@ -11,7 +11,7 @@ var $fileMp3 = document.querySelector('#file-mp3');
 var $canvas = document.getElementById('canvas-barra');
 
 var $nomeMusica = document.querySelector('#nome-musica');
-var $playlist = document.querySelector('#playlist');
+var $playlist = document.querySelector('#lista');
 
 var musicaAtual = 0;
 var flagShuffle = false;
@@ -154,7 +154,7 @@ function shuffleMusic() {
 
 function loadPlaylist() {
     for (var i = 0; i < musicas.length; i++) {
-        playlist.innerHTML +=
+        $playlist.innerHTML +=
             "<button class='faixa' onclick='loadMusic("+ i +");playMusic();'>" +
                 "<i class='material-icons'>play_circle_filled</i> "+ musicas[i].nome +
             "</button>";
