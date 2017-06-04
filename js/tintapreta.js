@@ -1,3 +1,5 @@
+var numeros = [];
+
 var $botaoPlayPause = document.querySelector('#play-pause');
 var $botaoNext = document.querySelector('#next-music');
 var $botaoPrevious = document.querySelector('#previous-music');
@@ -8,9 +10,9 @@ var $botaoDownload = document.querySelector('#download-music');
 var $playerAudio = document.querySelector('#player');
 var $capaAlbum = document.querySelector('#capa-album');
 var $fileMp3 = document.querySelector('#file-mp3');
-var $canvas = document.getElementById('canvas-barra');
 
 var $nomeMusica = document.querySelector('#nome-musica');
+var $progresso = document.querySelector('#progresso');
 var $playlist = document.querySelector('#lista');
 
 var musicaAtual = 0;
@@ -36,27 +38,15 @@ var musicas = [
     {'id':'17', 'nome':'Último desejo', 'artista':'Noel Rosa', 'capa':'Vol_6.jpg'}
 ];
 
+
+for (var i=0; i<musicas.length; i++) {
+   numeros[i] = i;
+}
+
+
 loadPlaylist();
 loadMusic(musicaAtual);
 
-function initEvents() {
-
-    $playerAudio.addEventListener("timeupdate", barraProgresso, true);
-
-    $canvas.addEventListener("click", function(e) {
-        if (!e) {
-            e = window.event;
-        }
-        try {
-            $playerAudio.currentTime = $playerAudio.duration * (e.offsetX / $canvas.clientWidth);
-        }
-        catch (err) {
-            if (window.console && console.error("Error:" + err));
-        }
-    }, true);
-}
-
-window.addEventListener("DOMContentLoaded", initEvents, false);
 $playerAudio.addEventListener("timeupdate", barraProgresso, true);
 
 
@@ -146,7 +136,7 @@ function restartMusic() {
 
 
 function shuffleMusic() {
-    var sort = Math.round(Math.random() * 8); //(musicas.length-1));
+    var sort = Math.round(Math.random() * (musicas.length-1));
     loadMusic(sort);
     playMusic();
 }
@@ -163,15 +153,7 @@ function loadPlaylist() {
 
 
 function barraProgresso() {
-    var elapsedTime = Math.round($playerAudio.currentTime);
-    if (canvas.getContext) {
-        var ctx = canvas.getContext("2d");
-        ctx.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
-        ctx.fillStyle = "#fff";
-        var fWidth = (elapsedTime / $playerAudio.duration) * (canvas.clientWidth);
-        console.log($playerAudio.duration);
-        if (fWidth > 0) {
-            ctx.fillRect(0, 0, fWidth, canvas.clientHeight);
-        }
-    }
+    var tempoExecutado = Math.round($playerAudio.currentTime);
+    $progresso.setAttribute('max', $playerAudio.duration);
+    $progresso.setAttribute('value', tempoExecutado);
 }

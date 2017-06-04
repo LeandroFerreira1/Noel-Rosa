@@ -24,7 +24,7 @@ button {
     font-family: "romance-fatal";
 }
 
-
+/*
 nav.menu-navigation-basic ul {
 	padding: 0;
   margin: 0;
@@ -58,10 +58,6 @@ nav.menu-navigation-basic ul li a {
 
 }
 
-.img-brand {
-    height: 60px;
-}
-
 .menu-navigation-basic ul li a.selected {
     color: #5c3239;
 }
@@ -76,7 +72,92 @@ nav.menu-navigation-basic ul li a {
 
 .menu-navigation-basic ul li a:hover {
      color: #5c3239;
+} */
+
+.img-brand {
+    height: 60px;
 }
+
+.topnav {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 3em;
+  float: left;
+  z-index: 1;
+  position: absolute;
+  background-color: #fdece6;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-top: solid 1em #f4dcdc;
+}
+
+.topnav a {
+  float: none;
+  text-align: center;
+  text-decoration: none;
+  color: #ea7e83;
+  margin-top: 0px;
+  padding: 1em 0 1em 0;
+  font-size: 1.6em;
+  display: inline;
+  margin: 0 1.8em 0 1.8em;
+  -webkit-transition:all .8s cubic-bezier(0.23,1,0.32,1);
+    -moz-transition:all .8s cubic-bezier(0.23,1,0.32,1);
+    -o-transition:all .8s cubic-bezier(0.23,1,0.32,1);
+    -ms-transition:all .8s cubic-bezier(0.23,1,0.32,1);
+    transition:all .8s cubic-bezier(0.23,1,0.32,1);
+}
+
+.topnav a:hover {
+     color: #5c3239;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    .topnav a {
+        float: left;
+        padding-right: 0;
+        margin: 0;
+    }
+
+  .topnav a:not(:first-child) {
+        display: none;
+  }
+
+  .topnav a.icon {
+        position: absolute;
+        right: 1em;
+        top: 0;
+        display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .topnav.responsive {
+        position: fixed;
+  }
+
+  .topnav.responsive .icon {
+        position: absolute;
+        right: 1em;
+        top: 0;
+  }
+
+    div.responsive a {
+        display: block;
+        text-align: left;
+    }
+
+}
+
 
 .content {
     height: 100%;
@@ -177,7 +258,7 @@ nav.menu-navigation-basic ul li a {
 
 .controles {
     padding: .6em;
-    display: block;
+    display: inline;
 }
 
 .botao {
@@ -231,10 +312,9 @@ nav.menu-navigation-basic ul li a {
     background-color: transparent;
     border-width: 0;
     color: #C24E57;
-    vertical-align: top;
     cursor: pointer;
     height: 2em;
-    padding: 0.2em;
+    padding: .2em;
     font-size: 1.2em;
     outline:none;
 }
@@ -253,6 +333,27 @@ nav.menu-navigation-basic ul li a {
     cursor: pointer;
 }
 
+progress {
+    height: .8em;
+    display: block;
+    width: 100%;
+    margin: 2em auto;
+    padding: .2em;
+    border: 0 none;
+    background: #fff;
+    color: #c24d56;
+}
+
+progress::-moz-progress-bar {
+    background: #c24d56;
+}
+
+progress::-webkit-progress-bar {
+    background: #fff;
+}
+progress::-webkit-progress-value {
+    background: #c24d56;
+}
 
 .scrollbar::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -279,13 +380,14 @@ nav.menu-navigation-basic ul li a {
 
     .titulo {
         text-align: left;
-        font-size: 1.8em;
-        display: inline;
+        font-size: 2em;
+        display: inline-block;
+        vertical-align: top;
     }
 
     .controles {
         text-align: center;
-        display: inline;
+        display: block;
     }
 
     .player-list {

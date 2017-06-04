@@ -31,6 +31,7 @@
     </head>
 
     <body>
+        <!--
       <nav class="menu-navigation-basic" >
        <ul>
          <li><a href="#top" class="scroll"><img class="img-brand" src="./img/Noel-Logo.svg" alt="Tinta Preta"></a></li>
@@ -39,8 +40,17 @@
          <li><a href="#tintapreta" class="scroll">Tinta Preta</a></li>
          <li><a href="#contato" class="scroll">Contato</a></li>
        </ul>
-
      </nav>
+ -->
+
+    <div class="topnav" id="myTopnav">
+        <a href="#top" class="scroll"><img class="img-brand" src="./img/Noel-Logo.svg" alt="Tinta Preta"></a>
+        <a href="#projeto" class="scroll">Projeto</a>
+        <a href="#playlist" class="scroll">Playlist</a>
+        <a href="#tintapreta" class="scroll">Tinta Preta</a>
+        <a href="#contato" class="scroll">Contato</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="material-icons icon" onclick="myFunction()">menu</a>
+    </div>
 
      <!-- Leitor de PDF -->
 
@@ -78,16 +88,14 @@
           <div class="player-list">
               <h2>Playlist</h2>
             <div class="player">
-
-                    <img src="" class="capa" id="capa-album" alt="">
-                <div class="controles">
+                <img src="" class="capa" id="capa-album" alt="">
                 <div class="titulo">
                   <span id="nome-musica"></span>
                 </div>
                 <div class="">
-                    <progress value="0" max="100">0%</progress>
+                    <progress value="0" max="0" id="progresso" class=""></progress>
                 </div>
-
+                <div class="controles">
                     <button class="botao material-icons" type="button" name="button" id="restart-music" onclick="restartMusic()">replay</button>
                     <button class="botao material-icons" type="button" name="button" id="previous-music">skip_previous</button>
                     <button class="botao material-icons" type="button" name="button" id="play-pause">play_arrow</button>
@@ -137,6 +145,18 @@
         <script type="text/javascript" src="js/tintapreta.js"></script>
         <!-- Script Leitor PFD -->
         <script type="text/javascript" src="js/pdf.js"></script>
+
+        <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+        </script>
+
         <script type="text/javascript">
             (function($) {
                 "use strict";
