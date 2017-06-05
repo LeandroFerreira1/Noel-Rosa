@@ -52,6 +52,8 @@
         <a href="javascript:void(0);" style="font-size:15px;" class="material-icons icon" onclick="myFunction()">menu</a>
     </div>
 
+    <a href="#" class="voltar-ao-topo"><i class="material-icons">keyboard_arrow_up</i></a>
+
      <!-- Leitor de PDF -->
 
      <div class="revista" id="top">
@@ -184,6 +186,26 @@
                 });
             })(jQuery);
         </script>
+
+        <script type="text/javascript">
+
+              $(document).ready(function(){
+                    $(window).scroll(function(){
+                        if ($(this).scrollTop() > 100) {
+                            $('.voltar-ao-topo').fadeIn();
+                        } else {
+                            $('.voltar-ao-topo').fadeOut();
+                        }
+                    });
+
+                    $('.voltar-ao-topo').click(function(){
+                        $('html, body').animate({scrollTop : 0},800);
+                        return false;
+                    });
+              });
+
+        </script>
+
 
     </body>
 </html>
