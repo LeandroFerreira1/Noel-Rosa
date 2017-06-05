@@ -175,6 +175,8 @@ nav.menu-navigation-basic ul li a {
     border-width: 0.2em;
 }
 
+
+
 .revista{
     padding-top: 4em;
     background-color: #f4dcdc;
@@ -393,6 +395,30 @@ progress::-webkit-progress-value {
 	background-color: #C24E57;
 }
 
+.redondo{
+  border: solid .1em;
+  border-color: #fff;
+  padding: 0.1em 0.1em 0.1em 0.1em;
+  display: block;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline;
+
+
+}
+
+.redondo-img{
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 2em;
+  height: 2em;
+  display: inline;
+
+}
+
+
 
 @media screen and (min-width: 768px) {
 
@@ -435,6 +461,29 @@ progress::-webkit-progress-value {
         text-align: justify;
         color: #4a1d2a;
         padding-bottom: 2em;
+    }
+
+    .redondo{
+      border: solid .1em;
+      border-color: #fff;
+      padding: 0.1em 0.1em 0.1em 0.1em;
+      display: block;
+      border-radius: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      display: inline;
+
+    }
+
+    .redondo-img{
+      display: block;
+      border-radius: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      width: 3em;
+      height: 3em;
+      display: inline;
+
     }
 }
 
