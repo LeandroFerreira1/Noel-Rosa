@@ -485,6 +485,8 @@ progress::-webkit-progress-value {
       display: inline;
 
     }
+
+
 }
 
   .voltar-ao-topo {
@@ -502,3 +504,9 @@ progress::-webkit-progress-value {
   .voltar-ao-topo:hover {
       background-color: rgba(0, 0, 0, 0.2);
     }
+
+    .redondo-img:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+      }
