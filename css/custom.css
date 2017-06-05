@@ -151,12 +151,16 @@ nav.menu-navigation-basic ul li a {
         top: 0;
   }
 
+
+
     div.responsive a {
         display: block;
         text-align: left;
     }
 
 }
+
+
 
 
 .content {
@@ -292,6 +296,25 @@ nav.menu-navigation-basic ul li a {
     margin-top: 1em;
 }
 
+.download-projeto {
+  text-align: center;
+}
+
+.botao-download-projeto {
+    display: inline-block;
+    color: #5c3239;
+    font-size: 1.4em;
+    background-color: transparent;
+    border-width: 0;
+    cursor: pointer;
+    outline:none;
+    text-decoration: none;
+    border: solid #5c3239;
+    border-width: .1em;
+    padding: .2em 1em .2em 1em;
+    margin-top: 1em;
+}
+
 .botao:hover {
     color: #F4ACAD;
 }
@@ -379,7 +402,7 @@ progress::-webkit-progress-value {
     }
 
     .titulo {
-        text-align: left;
+        text-align: center;
         font-size: 2em;
         display: inline-block;
         vertical-align: top;
