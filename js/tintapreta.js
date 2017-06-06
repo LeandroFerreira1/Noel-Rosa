@@ -143,6 +143,7 @@ function shuffleMusic() {
 
     var sort = Math.round(Math.random() * (musicas.length-1-cont));
     var pausado = $playerAudio.paused;
+    var finalizado = $playerAudio.ended;
 
     if (numeros.length > 0) {
 
@@ -152,7 +153,7 @@ function shuffleMusic() {
 
         loadMusic(id);
 
-        if (!pausado)
+        if (!pausado || finalizado)
             playMusic();
 
     } else {
