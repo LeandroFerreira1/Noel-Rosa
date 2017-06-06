@@ -36,7 +36,7 @@ button {
 }
 
 .img-brand {
-    height: 2.8em;
+    height: 2em;
 }
 
 .topnav a {
@@ -63,7 +63,7 @@ button {
 .topnav .icon {
     margin: 0;
     position: absolute;
-    top: 1em;
+    top: .7em;
     right: .5em;
     display: none;
 }
@@ -79,7 +79,7 @@ button {
        display: block;
         margin: 0;
         position: absolute;
-        top: 1em;
+        top: .7em;
         right: .5em;
   }
 }
@@ -88,7 +88,7 @@ button {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
       position: absolute;
-      top: 1em;
+      top: .7em;
       right: .5em;
   }
   .topnav.responsive a {
@@ -203,6 +203,7 @@ button {
     padding-left: 1em;
     font-size: 1.2em;
     color: #fff;
+    padding-top: 1em;
 }
 
 .controles {
@@ -403,6 +404,8 @@ progress::-webkit-progress-value {
         font-size: 2em;
         display: inline-block;
         vertical-align: top;
+        margin: 0 auto;
+        width: 55%;
     }
 
     .controles {
