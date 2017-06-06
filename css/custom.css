@@ -133,12 +133,12 @@ button {
 .sobre {
     background-color: #e57c80;
     padding-bottom: 8em;
-
+    padding-top: 4em;
 }
 
 .projeto {
     background-color: #f6cece;
-    padding-top: 8em;
+    padding-top: 6.4em;
     padding-bottom: 8em;
 
 }
@@ -329,6 +329,7 @@ progress {
     border: 0 none;
     background: #fff;
     color: #c24d56;
+    cursor: pointer;
 }
 
 progress::-moz-progress-bar {

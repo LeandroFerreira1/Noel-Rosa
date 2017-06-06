@@ -39,8 +39,18 @@ var musicas = [
 loadPlaylist();
 loadMusic(musicaAtual);
 
-$playerAudio.addEventListener("timeupdate", barraProgresso, true);
+$playerAudio.addEventListener('timeupdate', barraProgresso, true);
+$botaoNext.addEventListener('click', nextMusic, true);
+$botaoPrevious.addEventListener('click', previousMusic, true);
+$playerAudio.addEventListener('ended', nextMusic, true);
+$botaoShuffle.addEventListener('click', statusShuffle, true);
+$progresso.addEventListener('click', seek);
 
+function seek(e) {
+    var percentual = e.offsetX / this.offsetWidth;
+    $playerAudio.currentTime = percentual * $playerAudio.duration;
+    $progresso.value = percentual / 100;
+}
 
 $botaoPlayPause.addEventListener('click', function(e) {
   if ($playerAudio.paused) {
@@ -48,21 +58,6 @@ $botaoPlayPause.addEventListener('click', function(e) {
   } else {
     pauseMusic();
   }
-}, true);
-
-
-$botaoNext.addEventListener('click', function(e) {
-    nextMusic();
-}, true);
-
-
-$botaoPrevious.addEventListener('click', function(e) {
-    previousMusic();
-}, true);
-
-
-$playerAudio.addEventListener('ended', function(e) {
-    nextMusic();
 }, true);
 
 
@@ -74,11 +69,6 @@ $botaoVolumeOff.addEventListener('click', function(e) {
         $playerAudio.volume = 1;
         $botaoVolumeOff.textContent = 'volume_up';
     }
-}, true);
-
-
-$botaoShuffle.addEventListener('click', function(e) {
-    statusShuffle();
 }, true);
 
 
@@ -106,12 +96,15 @@ function pauseMusic() {
 
 
 function nextMusic() {
+
     var pausado = $playerAudio.paused;
+    var finalizado = $playerAudio.ended;
+
     if (flagShuffle) {
         shuffleMusic();
     } else if (musicaAtual < (musicas.length-1)) {
         loadMusic(musicaAtual+1);
-        if (!pausado) {
+        if (!pausado || finalizado) {
             playMusic();
         }
     }
@@ -142,7 +135,6 @@ function statusShuffle() {
 
     if (flagShuffle) {
         $botaoShuffle.textContent = 'format_list_numbered';
-        shuffleMusic();
     }
 }
 
