@@ -349,6 +349,10 @@ nav.menu-navigation-basic ul li a {
     padding: .2em;
     font-size: 1.2em;
     outline:none;
+    display: inline-flex;
+    align-items: center; /* cross axis */
+    justify-content: center; /* main axis */
+    line-height: 1; /* reset */
 }
 
 .faixa:hover {
@@ -417,7 +421,7 @@ progress::-webkit-progress-value {
 
 .redondo-img{
   border-radius: 50%;
-  margin-left: auto;
+  margin-left: 1em;
   margin-right: auto;
   width: 2em;
   height: 2em;

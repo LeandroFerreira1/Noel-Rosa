@@ -145,9 +145,11 @@ function shuffleMusic() {
 function loadPlaylist() {
     for (var i = 0; i < musicas.length; i++) {
         $playlist.innerHTML +=
+            "<div>"+
             "<button class='faixa' onclick='loadMusic("+ i +");playMusic();'>" +
                 "<i class='material-icons'>play_circle_filled</i> "+ musicas[i].nome +
-            "</button>";
+            "</button>" +
+            "</div>";
     }
 }
 
