@@ -177,6 +177,7 @@ nav.menu-navigation-basic ul li a {
 
 
 
+
 .revista{
     padding-top: 4em;
     background-color: #f4dcdc;
@@ -258,6 +259,7 @@ nav.menu-navigation-basic ul li a {
     font-family: "calibri";
     display: block;
     padding-left: 1em;
+    padding-top: .7em;
     font-size: 1.2em;
     color: #fff;
 }
@@ -429,9 +431,12 @@ progress::-webkit-progress-value {
 
     .titulo {
         text-align: center;
+        align-items: center;
         font-size: 2em;
         display: inline-block;
         vertical-align: top;
+        margin: auto;
+        width: 55%;
     }
 
     .controles {
@@ -467,26 +472,15 @@ progress::-webkit-progress-value {
       border: solid .1em;
       border-color: #fff;
       padding: 0.1em 0.1em 0.1em 0.1em;
-      display: block;
       border-radius: 50%;
-      margin-left: auto;
-      margin-right: auto;
-      display: inline;
 
     }
 
     .redondo-img{
-      display: block;
       border-radius: 50%;
-      margin-left: auto;
-      margin-right: auto;
       width: 3em;
       height: 3em;
-      display: inline;
-
     }
-
-
 }
 
   .voltar-ao-topo {
