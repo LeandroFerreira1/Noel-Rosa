@@ -78,8 +78,7 @@ $botaoVolumeOff.addEventListener('click', function(e) {
 
 
 $botaoShuffle.addEventListener('click', function(e) {
-    flagShuffle = true;
-    shuffleMusic();
+    statusShuffle();
 }, true);
 
 
@@ -107,22 +106,25 @@ function pauseMusic() {
 
 
 function nextMusic() {
+    var pausado = $playerAudio.paused;
     if (flagShuffle) {
         shuffleMusic();
     } else if (musicaAtual < (musicas.length-1)) {
         loadMusic(musicaAtual+1);
-        if (!$playerAudio.paused)
+        if (!pausado) {
             playMusic();
+        }
     }
 }
 
 
 function previousMusic() {
+    var pausado = $playerAudio.paused;
     if (flagShuffle) {
         shuffleMusic();
     } else if (musicaAtual > 0) {
         loadMusic(musicaAtual-1);
-        if (!$playerAudio.paused)
+        if (!pausado)
             playMusic();
     }
 }
@@ -133,9 +135,20 @@ function restartMusic() {
 }
 
 
+function statusShuffle() {
+
+    flagShuffle = !flagShuffle;
+    $botaoShuffle.textContent = 'shuffle';
+
+    if (flagShuffle) {
+        $botaoShuffle.textContent = 'format_list_numbered';
+        shuffleMusic();
+    }
+}
+
+
 function shuffleMusic() {
 
-    flagShuffle = true;
     var sort = Math.round(Math.random() * (musicas.length-1-cont));
 
     if (numeros.length > 0) {

@@ -33,27 +33,15 @@
     </head>
 
     <body>
-        <!--
-      <nav class="menu-navigation-basic" >
-       <ul>
-         <li><a href="#top" class="scroll"><img class="img-brand" src="./img/Noel-Logo.svg" alt="Tinta Preta"></a></li>
-         <li><a href="#projeto" class="scroll">Projeto</a></li>
-         <li><a href="#playlist" class="scroll">Playlist</a></li>
-         <li><a href="#tintapreta" class="scroll">Tinta Preta</a></li>
-         <li><a href="#contato" class="scroll">Contato</a></li>
-       </ul>
-     </nav>
--->
+
     <div class="topnav" id="myTopnav">
         <a href=""><img class="img-brand" src="./img/Noel-Logo.svg" alt="Tinta Preta"></a>
-        <a href="#projeto" class="scroll">Projeto</a>
-        <a href="#playlist" class="scroll">Playlist</a>
-        <a href="#tintapreta" class="scroll">Tinta Preta</a>
-        <a href="#contato" class="scroll">Contato</a>
-        <a href="javascript:void(0);" style="font-size:15px;" class="material-icons icon" onclick="myFunction()">menu</a>
+        <a href="javascript:void(0);" style="font-size:2em;" class="material-icons icon" onclick="myFunction()" id="menu">menu</a>
+        <a href="#projeto" class="scroll" onclick="myFunction()">Projeto</a>
+        <a href="#playlist" class="scroll" onclick="myFunction()">Playlist</a>
+        <a href="#tintapreta" class="scroll" onclick="myFunction()">Tinta Preta</a>
+        <a href="#contato" class="scroll" onclick="myFunction()">Contato</a>
     </div>
-
-
 
     <a href="#" class="voltar-ao-topo"><i class="material-icons">keyboard_arrow_up</i></a>
 
@@ -164,9 +152,12 @@
         <script>
         function myFunction() {
             var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
+            var botao = document.getElementById("menu");
+            if (botao.textContent == 'menu') {
+                botao.textContent = 'close';
                 x.className += " responsive";
             } else {
+                botao.textContent = 'menu';
                 x.className = "topnav";
             }
         }
@@ -178,12 +169,6 @@
                 // Fecha o menu responsivo com clique em algum item
                 $('.navbar-collapse ul li a').click(function() {
                     $('.navbar-collapse ul li a').addClass('menu-clicked');
-                });
-
-                // marca item do menu clicado
-                $('.menu-navigation-basic ul li a').click(function(){
-                    $('.menu-navigation-basic ul li a').removeClass('selected')
-                    $(this).addClass('selected');
                 });
 
                 // Scroll suave
