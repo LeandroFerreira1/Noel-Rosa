@@ -1,4 +1,4 @@
-var numeros = [];
+var numeros = [], cont = 0, musicaAtual = 0, flagShuffle = false;
 
 var $botaoPlayPause = document.querySelector('#play-pause');
 var $botaoNext = document.querySelector('#next-music');
@@ -15,9 +15,6 @@ var $nomeMusica = document.querySelector('#nome-musica');
 var $progresso = document.querySelector('#progresso');
 var $playlist = document.querySelector('#lista');
 
-var musicaAtual = 0;
-var flagShuffle = false;
-
 var musicas = [
     {'id':'1', 'nome':'Não morre tão cedo', 'artista':'Noel Rosa', 'capa':'Vol_7.jpg'},
     {'id':'2', 'nome':'Minha viola', 'artista':'Noel Rosa', 'capa':'Vol_1.jpg'},
@@ -27,21 +24,16 @@ var musicas = [
     {'id':'6', 'nome':'Fita amarela', 'artista':'Noel Rosa', 'capa':'Vol_7.jpg'},
     {'id':'7', 'nome':'Meu barracão', 'artista':'Noel Rosa', 'capa':'Vol_4.jpg'},
     {'id':'8', 'nome':'Não tem tradução', 'artista':'Noel Rosa', 'capa':'Vol_4.jpg'},
-    {'id':'9', 'nome':'Três apitos', 'artista':'Noel Rosa', 'capa':'Vol_6.jpg'},
-    {'id':'10', 'nome':'Rapaz folgado', 'artista':'Noel Rosa', 'capa':'Vol_6.jpg'},
-    {'id':'11', 'nome':'Capricho de rapaz solteiro', 'artista':'Noel Rosa', 'capa':'Vol_3.jpg'},
-    {'id':'12', 'nome':'Dama do cabaré', 'artista':'Noel Rosa', 'capa':'Vol_5.jpg'},
-    {'id':'13', 'nome':'Conversa de botequim', 'artista':'Noel Rosa', 'capa':'Vol_5.jpg'},
-    {'id':'14', 'nome':'Palpite infeliz', 'artista':'Noel Rosa', 'capa':'Vol_5.jpg'},
-    {'id':'15', 'nome':'Só pode ser você', 'artista':'Noel Rosa', 'capa':'Vol_5.jpg'},
-    {'id':'16', 'nome':'Eu sei sofrer', 'artista':'Noel Rosa', 'capa':'Vol_5.jpg'},
-    {'id':'17', 'nome':'Último desejo', 'artista':'Noel Rosa', 'capa':'Vol_6.jpg'}
+    //{'id':'9', 'nome':'Três apitos', 'artista':'Noel Rosa', 'capa':'Vol_6.jpg'},
+    //{'id':'10', 'nome':'Rapaz folgado', 'artista':'Noel Rosa', 'capa':'Vol_6.jpg'},
+    //{'id':'11', 'nome':'Capricho de rapaz solteiro', 'artista':'Noel Rosa', 'capa':'Vol_3.jpg'},
+    //{'id':'12', 'nome':'Dama do cabaré', 'artista':'Noel Rosa', 'capa':'Vol_5.jpg'},
+    //{'id':'13', 'nome':'Conversa de botequim', 'artista':'Noel Rosa', 'capa':'Vol_5.jpg'},
+    //{'id':'14', 'nome':'Palpite infeliz', 'artista':'Noel Rosa', 'capa':'Vol_5.jpg'},
+    //{'id':'15', 'nome':'Só pode ser você', 'artista':'Noel Rosa', 'capa':'Vol_5.jpg'},
+    //{'id':'16', 'nome':'Eu sei sofrer', 'artista':'Noel Rosa', 'capa':'Vol_5.jpg'},
+    //{'id':'17', 'nome':'Último desejo', 'artista':'Noel Rosa', 'capa':'Vol_6.jpg'}
 ];
-
-
-for (var i=0; i<musicas.length; i++) {
-   numeros[i] = i;
-}
 
 
 loadPlaylist();
@@ -115,17 +107,23 @@ function pauseMusic() {
 
 
 function nextMusic() {
-    if (musicaAtual < (musicas.length-1)) {
+    if (flagShuffle) {
+        shuffleMusic();
+    } else if (musicaAtual < (musicas.length-1)) {
         loadMusic(musicaAtual+1);
-        playMusic();
+        if (!$playerAudio.paused)
+            playMusic();
     }
 }
 
 
 function previousMusic() {
-    if (musicaAtual > 0) {
+    if (flagShuffle) {
+        shuffleMusic();
+    } else if (musicaAtual > 0) {
         loadMusic(musicaAtual-1);
-        playMusic();
+        if (!$playerAudio.paused)
+            playMusic();
     }
 }
 
@@ -136,18 +134,40 @@ function restartMusic() {
 
 
 function shuffleMusic() {
-    var sort = Math.round(Math.random() * (musicas.length-1));
-    loadMusic(sort);
-    playMusic();
+
+    flagShuffle = true;
+    var sort = Math.round(Math.random() * (musicas.length-1-cont));
+
+    if (numeros.length > 0) {
+
+        var id = numeros[sort];
+        numeros.splice(sort, 1);
+        cont++;
+
+        loadMusic(id);
+
+        if (!$playerAudio.paused)
+            playMusic();
+
+    } else {
+        cont=0;
+        for (var i=0; i<musicas.length; i++) {
+           numeros[i] = i;
+        }
+        shuffleMusic();
+    }
+
 }
 
 
 function loadPlaylist() {
     for (var i = 0; i < musicas.length; i++) {
         $playlist.innerHTML +=
-            "<button class='faixa' onclick='loadMusic("+ i +");playMusic();'>" +
-                "<i class='material-icons'>play_circle_filled</i> "+ musicas[i].nome +
-            "</button>";
+            "<div>"+
+                "<button class='faixa' onclick='loadMusic("+ i +");playMusic();'>" +
+                    "<i class='material-icons'>play_circle_filled</i> "+ musicas[i].nome +
+                "</button>" +
+            "</div>";
     }
 }
 

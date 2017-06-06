@@ -177,7 +177,6 @@ nav.menu-navigation-basic ul li a {
 
 
 
-
 .revista{
     padding-top: 4em;
     background-color: #f4dcdc;
@@ -214,9 +213,16 @@ nav.menu-navigation-basic ul li a {
     color: #f4dcdc;
     font-size: 1.4em;
     background-color: #5c3239;
-    padding-bottom: 2em;
     padding-top: 3em;
 
+}
+
+.componentes {
+    color: #f4dcdc;
+    font-size: 1.4em;
+    background-color: #5c3239;
+    padding-bottom: 2em;
+    border: 0;
 }
 
 .content h2 {
@@ -259,7 +265,6 @@ nav.menu-navigation-basic ul li a {
     font-family: "calibri";
     display: block;
     padding-left: 1em;
-    padding-top: .7em;
     font-size: 1.2em;
     color: #fff;
 }
@@ -344,6 +349,10 @@ nav.menu-navigation-basic ul li a {
     padding: .2em;
     font-size: 1.2em;
     outline:none;
+    display: inline-flex;
+    align-items: center; /* cross axis */
+    justify-content: center; /* main axis */
+    line-height: 1; /* reset */
 }
 
 .faixa:hover {
@@ -412,15 +421,13 @@ progress::-webkit-progress-value {
 
 .redondo-img{
   border-radius: 50%;
-  margin-left: auto;
+  margin-left: 1em;
   margin-right: auto;
   width: 2em;
   height: 2em;
   display: inline;
 
 }
-
-
 
 @media screen and (min-width: 768px) {
 
@@ -431,12 +438,9 @@ progress::-webkit-progress-value {
 
     .titulo {
         text-align: center;
-        align-items: center;
         font-size: 2em;
         display: inline-block;
         vertical-align: top;
-        margin: auto;
-        width: 55%;
     }
 
     .controles {
@@ -472,15 +476,26 @@ progress::-webkit-progress-value {
       border: solid .1em;
       border-color: #fff;
       padding: 0.1em 0.1em 0.1em 0.1em;
+      display: block;
       border-radius: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      display: inline;
 
     }
 
     .redondo-img{
+      display: block;
       border-radius: 50%;
+      margin-left: auto;
+      margin-right: auto;
       width: 3em;
       height: 3em;
+      display: inline;
+
     }
+
+
 }
 
   .voltar-ao-topo {
