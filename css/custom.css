@@ -4,14 +4,13 @@
       src: url("../fonts/romance-fatal.ttf") format("truetype");
       font-weight: normal;
       font-style: normal;
-      }
+}
 
 @font-face {
   font-family: "calibri";
   src: url("../fonts/calibri.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-
 }
 
 html, body {
@@ -263,7 +262,7 @@ nav.menu-navigation-basic ul li a {
 .titulo {
     text-align: center;
     font-family: "calibri";
-    display: block;
+    display: inline-block;
     padding-left: 1em;
     font-size: 1.2em;
     color: #fff;
@@ -429,6 +428,32 @@ progress::-webkit-progress-value {
 
 }
 
+@media screen and (max-width: 400px) {
+
+
+        .redondo{
+          border: solid .1em;
+          border-color: #fff;
+          padding: 0.1em 0.1em 0.1em 0.1em;
+          display: block;
+          border-radius: 50%;
+          margin-left: auto;
+          margin-right: auto;
+
+        }
+
+        .redondo-img{
+          display: block;
+          border-radius: 50%;
+          margin-left: 0.2em;
+          margin-right: 0.2em;
+          width: 1.4em;
+          height: 1.4em;
+
+        }
+
+}
+
 @media screen and (min-width: 768px) {
 
     .capa {
@@ -487,8 +512,8 @@ progress::-webkit-progress-value {
     .redondo-img{
       display: block;
       border-radius: 50%;
-      margin-left: auto;
-      margin-right: auto;
+      margin-left: 0.2em;
+      margin-right: 0.2em;
       width: 3em;
       height: 3em;
       display: inline;
