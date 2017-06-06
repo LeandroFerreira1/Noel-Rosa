@@ -19,6 +19,13 @@ html, body {
   font-family: "romance-fatal";
 }
 
+::selection {
+  background: #ffb7b7;
+}
+::-moz-selection {
+  background: #ffb7b7; 
+}
+
 button {
     font-family: "romance-fatal";
 }
@@ -114,11 +121,10 @@ button {
 
 
 .revista{
-    padding-top: 4em;
+
     background-color: #f4dcdc;
     margin-bottom: -8em;
 }
-
 
 .playlist {
     background-color: #f5adad;
@@ -188,26 +194,30 @@ button {
 }
 
 .capa {
-    border: solid .2em;
-    border-color: #fff;
     display: block;
-    height: 12em;
     margin-left: auto;
     margin-right: auto;
+}
+
+.capa img {
+      height: 10em;
+  border: solid .2em;
+  border-color: #fff;
 }
 
 .titulo {
     text-align: center;
     font-family: "calibri";
+    font-family: "romance-fatal";
     display: inline-block;
     padding-left: 1em;
     font-size: 1.2em;
     color: #fff;
-    padding-top: 1em;
+    padding: 0;
 }
 
 .controles {
-    padding: .6em;
+    padding: .4em;
     display: inline;
 }
 
@@ -296,6 +306,10 @@ button {
     color: ;
 }
 
+.icon-play {
+  margin-right: .08em;
+}
+
 #canvas-barra {
     margin-top:10px;
     border-style: solid;
@@ -310,8 +324,8 @@ progress {
     height: .8em;
     display: block;
     width: 100%;
-    margin: 2em auto;
-    padding: .2em;
+    margin: .6em auto;
+    padding: 0.1em;
     border: 0 none;
     background: #fff;
     color: #c24d56;
@@ -352,6 +366,7 @@ progress::-webkit-progress-value {
   margin-left: auto;
   margin-right: auto;
   display: inline;
+  outline: none;
 
 
 }
@@ -392,20 +407,35 @@ progress::-webkit-progress-value {
 
 }
 
+
 @media screen and (min-width: 768px) {
 
     .capa {
-      display: inline;
-      height: 8em;
+      display: inline-block;
+      width: 10%;
+      margin: 0;
+      padding: 0;
+      margin-right: -10%;
+      text-align: left;
+    }
+
+    .capa img {
+        height: 6em;
+    }
+
+
+    .icon-play {
+      margin-right: .2em;
     }
 
     .titulo {
-        text-align: center;
-        font-size: 2em;
+      padding: 0 30% 0 30%;
+      float: right;
+        width: 40%;
+        font-size: 1.4em;
         display: inline-block;
         vertical-align: top;
-        margin: 0 auto;
-        width: 55%;
+        margin: 0;
     }
 
     .controles {
@@ -418,8 +448,8 @@ progress::-webkit-progress-value {
     }
 
     .player {
-        text-align: left;
         padding: 2em;
+        text-align: center;
     }
 
     .botao {
@@ -463,6 +493,20 @@ progress::-webkit-progress-value {
 
 }
 
+
+@media screen and (min-width: 1024px) {
+
+  .capa img {
+    height: 6em;
+  }
+
+  .titulo {
+      font-size: 1.6em;
+  }
+
+
+}
+
   .voltar-ao-topo {
       border: solid rgba(255,255,255, 0.7);
       position: fixed;
@@ -473,6 +517,7 @@ progress::-webkit-progress-value {
       display: none;
       text-align: center;
       padding: .1em .2em .1em .2em;
+        outline: none;
     }
 
   .voltar-ao-topo:hover {

@@ -16,23 +16,23 @@ var $progresso = document.querySelector('#progresso');
 var $playlist = document.querySelector('#lista');
 
 var musicas = [
-    {'id':'1', 'nome':'Não morre tão cedo', 'artista':'Noel Rosa', 'capa':'Vol_7.jpg'},
-    {'id':'2', 'nome':'Minha viola', 'artista':'Noel Rosa', 'capa':'Vol_1.jpg'},
-    {'id':'3', 'nome':'Com que roupa', 'artista':'Noel Rosa', 'capa':'Vol_1.jpg'},
-    {'id':'4', 'nome':'Gago apaixonado', 'artista':'Noel Rosa', 'capa':'Vol_1.jpg'},
-    {'id':'5', 'nome':'Riso de criança', 'artista':'Noel Rosa', 'capa':'Vol_4.jpg'},
-    {'id':'6', 'nome':'Fita amarela', 'artista':'Noel Rosa', 'capa':'Vol_7.jpg'},
-    {'id':'7', 'nome':'Meu barracão', 'artista':'Noel Rosa', 'capa':'Vol_4.jpg'},
-    {'id':'8', 'nome':'Não tem tradução', 'artista':'Noel Rosa', 'capa':'Vol_4.jpg'},
-    //{'id':'9', 'nome':'Três apitos', 'artista':'Noel Rosa', 'capa':'Vol_6.jpg'},
-    //{'id':'10', 'nome':'Rapaz folgado', 'artista':'Noel Rosa', 'capa':'Vol_6.jpg'},
-    //{'id':'11', 'nome':'Capricho de rapaz solteiro', 'artista':'Noel Rosa', 'capa':'Vol_3.jpg'},
-    //{'id':'12', 'nome':'Dama do cabaré', 'artista':'Noel Rosa', 'capa':'Vol_5.jpg'},
-    //{'id':'13', 'nome':'Conversa de botequim', 'artista':'Noel Rosa', 'capa':'Vol_5.jpg'},
-    //{'id':'14', 'nome':'Palpite infeliz', 'artista':'Noel Rosa', 'capa':'Vol_5.jpg'},
-    //{'id':'15', 'nome':'Só pode ser você', 'artista':'Noel Rosa', 'capa':'Vol_5.jpg'},
-    //{'id':'16', 'nome':'Eu sei sofrer', 'artista':'Noel Rosa', 'capa':'Vol_5.jpg'},
-    //{'id':'17', 'nome':'Último desejo', 'artista':'Noel Rosa', 'capa':'Vol_6.jpg'}
+    {'id':'01_nao_morre_tao_cedo', 'nome':'Não morre tão cedo', 'artista':'Noel Rosa', 'capa':'Vol_7.jpg'},
+    {'id':'02_minha_viola', 'nome':'Minha viola', 'artista':'Noel Rosa', 'capa':'Vol_1.jpg'},
+    {'id':'03_com_que_roupa', 'nome':'Com que roupa', 'artista':'Noel Rosa', 'capa':'Vol_1.jpg'},
+    {'id':'04_gago_apaixonado', 'nome':'Gago apaixonado', 'artista':'Noel Rosa', 'capa':'Vol_1.jpg'},
+    {'id':'05_riso_de_crianca', 'nome':'Riso de criança', 'artista':'Noel Rosa', 'capa':'Vol_4.jpg'},
+    {'id':'06_fita_amarela', 'nome':'Fita amarela', 'artista':'Noel Rosa', 'capa':'Vol_7.jpg'},
+    {'id':'07_meu_barraco', 'nome':'Meu barracão', 'artista':'Noel Rosa', 'capa':'Vol_4.jpg'},
+    {'id':'08_nao_tem_traducao', 'nome':'Não tem tradução', 'artista':'Noel Rosa', 'capa':'Vol_4.jpg'},
+    {'id':'09_tres_apitos', 'nome':'Três apitos', 'artista':'Noel Rosa', 'capa':'Vol_6.jpg'},
+    {'id':'10_rapaz_folgado', 'nome':'Rapaz folgado', 'artista':'Noel Rosa', 'capa':'Vol_6.jpg'},
+    {'id':'11_capricho_de_rapaz_solteiro', 'nome':'Capricho de rapaz solteiro', 'artista':'Noel Rosa', 'capa':'Vol_3.jpg'},
+    {'id':'12_dama_do_cabare', 'nome':'Dama do cabaré', 'artista':'Noel Rosa', 'capa':'Vol_5.jpg'},
+    {'id':'13_conversa_de_botequim', 'nome':'Conversa de botequim', 'artista':'Noel Rosa', 'capa':'Vol_5.jpg'},
+    {'id':'14_palpite_infeliz', 'nome':'Palpite infeliz', 'artista':'Noel Rosa', 'capa':'Vol_5.jpg'},
+    {'id':'15_so_pode_ser_voce', 'nome':'Só pode ser você', 'artista':'Noel Rosa', 'capa':'Vol_5.jpg'},
+    {'id':'16_eu_sei_sofrer', 'nome':'Eu sei sofrer', 'artista':'Noel Rosa', 'capa':'Vol_5.jpg'},
+    {'id':'17_ultimo_desejo', 'nome':'Último desejo', 'artista':'Noel Rosa', 'capa':'Vol_6.jpg'}
 ];
 
 
@@ -150,6 +150,7 @@ function statusShuffle() {
 function shuffleMusic() {
 
     var sort = Math.round(Math.random() * (musicas.length-1-cont));
+    var pausado = $playerAudio.paused;
 
     if (numeros.length > 0) {
 
@@ -159,7 +160,7 @@ function shuffleMusic() {
 
         loadMusic(id);
 
-        if (!$playerAudio.paused)
+        if (!pausado)
             playMusic();
 
     } else {
@@ -178,7 +179,7 @@ function loadPlaylist() {
         $playlist.innerHTML +=
             "<div>"+
                 "<button class='faixa' onclick='loadMusic("+ i +");playMusic();'>" +
-                    "<i class='material-icons'>play_circle_filled</i> "+ musicas[i].nome +
+                    "<i class='material-icons icon-play'>play_circle_filled</i> "+ musicas[i].nome +
                 "</button>" +
             "</div>";
     }
