@@ -213,9 +213,16 @@ nav.menu-navigation-basic ul li a {
     color: #f4dcdc;
     font-size: 1.4em;
     background-color: #5c3239;
-    padding-bottom: 2em;
     padding-top: 3em;
 
+}
+
+.componentes {
+    color: #f4dcdc;
+    font-size: 1.4em;
+    background-color: #5c3239;
+    padding-bottom: 2em;
+    border: 0;
 }
 
 .content h2 {
@@ -417,8 +424,6 @@ progress::-webkit-progress-value {
   display: inline;
 
 }
-
-
 
 @media screen and (min-width: 768px) {
 
