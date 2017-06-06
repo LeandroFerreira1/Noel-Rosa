@@ -23,7 +23,7 @@ html, body {
   background: #ffb7b7;
 }
 ::-moz-selection {
-  background: #ffb7b7; 
+  background: #ffb7b7;
 }
 
 button {
@@ -148,7 +148,7 @@ button {
     text-align: justify;
     color: #4a1d2a;
     padding-bottom: 2em;
-    padding-top: 4em;
+
 }
 
 .contato {
