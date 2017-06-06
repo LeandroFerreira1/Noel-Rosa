@@ -23,144 +23,81 @@ button {
     font-family: "romance-fatal";
 }
 
-/*
-nav.menu-navigation-basic ul {
-	padding: 0;
-  margin: 0;
-  list-style: none;
-  width: 100%;
-  height: 3em;
-  z-index: 1;
-  position: fixed;
-  background-color: #fdece6;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  border-top: solid 1em #f4dcdc;
-
+.topnav {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: #fdece6;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-top: solid 1em #f4dcdc;
 }
-
-nav.menu-navigation-basic ul li {
-  padding: 1em;
-	display: inline;
-  padding-left: 4em;
-  padding-right: 4em;
-}
-
-nav.menu-navigation-basic ul li a {
-    text-align: center;
-    text-decoration: none;
-    color: #ea7e83;
-    margin-top: 0px;
-    padding-top: 1em;
-    font-size: 1.6em;
-
-}
-
-.menu-navigation-basic ul li a.selected {
-    color: #5c3239;
-}
-
-.menu-navigation-basic ul li a {
-    -webkit-transition:all .8s cubic-bezier(0.23,1,0.32,1);
-  	-moz-transition:all .8s cubic-bezier(0.23,1,0.32,1);
-  	-o-transition:all .8s cubic-bezier(0.23,1,0.32,1);
-  	-ms-transition:all .8s cubic-bezier(0.23,1,0.32,1);
-  	transition:all .8s cubic-bezier(0.23,1,0.32,1);
-}
-
-.menu-navigation-basic ul li a:hover {
-     color: #5c3239;
-} */
 
 .img-brand {
-    height: 60px;
-}
-
-.topnav {
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 3em;
-  float: left;
-  z-index: 1;
-  position: absolute;
-  background-color: #fdece6;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  border-top: solid 1em #f4dcdc;
+    height: 2.8em;
 }
 
 .topnav a {
-  float: none;
-  text-align: center;
-  text-decoration: none;
-  color: #ea7e83;
-  margin-top: 0px;
-  padding: 1em 0 1em 0;
-  font-size: 1.6em;
+  float: left;
   display: inline;
-  margin: 0 1.8em 0 1.8em;
-  -webkit-transition:all .8s cubic-bezier(0.23,1,0.32,1);
-    -moz-transition:all .8s cubic-bezier(0.23,1,0.32,1);
-    -o-transition:all .8s cubic-bezier(0.23,1,0.32,1);
-    -ms-transition:all .8s cubic-bezier(0.23,1,0.32,1);
-    transition:all .8s cubic-bezier(0.23,1,0.32,1);
+  color: #ea7e83;
+  text-align: center;
+  margin-top: 0px;
+  padding: .2em 0 .2em 0;
+   margin: 0 1.8em 0 1.8em;
+  text-decoration: none;
+   font-size: 1.4em;
+   -webkit-transition:all .8s cubic-bezier(0.23,1,0.32,1);
+     -moz-transition:all .8s cubic-bezier(0.23,1,0.32,1);
+     -o-transition:all .8s cubic-bezier(0.23,1,0.32,1);
+     -ms-transition:all .8s cubic-bezier(0.23,1,0.32,1);
+     transition:all .8s cubic-bezier(0.23,1,0.32,1);
 }
 
 .topnav a:hover {
-     color: #5c3239;
+    color: #5c3239;
 }
 
 .topnav .icon {
-  display: none;
+    margin: 0;
+    position: absolute;
+    top: 1em;
+    right: .5em;
+    display: none;
 }
 
 @media screen and (max-width: 768px) {
 
-    .topnav a {
-        float: left;
-        padding-right: 0;
-        margin: 0;
+    .topnav {
+        display: block;
     }
 
-  .topnav a:not(:first-child) {
-        display: none;
-  }
-
+  .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
+       display: block;
+        margin: 0;
         position: absolute;
-        right: 1em;
-        top: 0;
-        display: block;
+        top: 1em;
+        right: .5em;
   }
 }
 
 @media screen and (max-width: 768px) {
-
-  .topnav.responsive {
-        position: fixed;
-  }
-
+  .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
-        position: absolute;
-        right: 1em;
-        top: 0;
+      position: absolute;
+      top: 1em;
+      right: .5em;
   }
-
-
-
-    div.responsive a {
-        display: block;
-        text-align: left;
-    }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 
 }
-
-
-
 
 .content {
     height: 100%;
