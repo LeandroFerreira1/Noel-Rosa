@@ -43,7 +43,7 @@ flipbook.turn({
 
   // The number of pages
 
-  pages: 13,
+  pages: 56,
 
   // Events
 

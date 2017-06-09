@@ -30,7 +30,6 @@
 .magazine .region{
 	position:absolute;
 	overflow:hidden;
-	background:#0066FF;
 	opacity:0.2;
 	-webkit-border-radius:10px;
 	-moz-border-radius:10px;
